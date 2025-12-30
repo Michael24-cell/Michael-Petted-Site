@@ -11,7 +11,6 @@
         .font-serif { font-family: 'Playfair Display', serif; }
         .font-sans { font-family: 'Inter', sans-serif; }
         
-        /* Custom aspect ratio for vertical video aesthetic (e.g., 4:5 to 9:16) */
         .aspect-portrait { aspect-ratio: 4 / 5; }
     </style>
 </head>
@@ -23,7 +22,7 @@
             <div class="space-x-10 hidden md:flex font-medium text-xs tracking-widest uppercase text-gray-500">
                 <a href="index.html" class="hover:text-amber-600 transition">Home</a>
                 <a href="schedule.html" class="hover:text-amber-600 transition">Schedule</a>
-                <a href="testimonials.html" class="text-amber-600">Testimonials</a>
+                <a href="testimonials.html" class="text-amber-600 border-b-2 border-amber-600">Testimonials</a>
                 <a href="about.html" class="hover:text-amber-600 transition">About</a>
             </div>
             <a href="schedule.html" class="text-white bg-amber-600 px-6 py-2 rounded-full hover:bg-amber-700 transition shadow-lg text-xs tracking-widest uppercase font-bold">
@@ -32,142 +31,98 @@
         </nav>
     </header>
 
-    <section class="py-32 text-center border-b border-gray-100 bg-neutral-50 px-6">
+    <section class="pt-24 pb-12 text-center px-6">
         <div class="max-w-5xl mx-auto">
             <span class="text-amber-600 text-xs tracking-[0.3em] uppercase font-bold mb-4 block">What they're saying</span>
             <h1 class="text-6xl md:text-8xl font-serif font-bold text-gray-900 leading-none mb-8">The Results.</h1>
-            <p class="max-w-2xl mx-auto text-xl text-gray-500 font-light leading-relaxed italic">
-                “A safe space for dangerous work.”
-            </p>
         </div>
     </section>
 
-    <section class="py-24 max-w-screen-xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-serif font-bold text-gray-900 mb-2">Student Success Stories</h2>
-            <p class="text-lg text-gray-500">A focus on the craft, the community, and career results.</p>
-        </div>
-        
-        <div class="mb-12 md:mb-20 rounded-xl overflow-hidden shadow-2xl bg-gray-900 text-white border-4 border-gray-900">
-            <div class="grid grid-cols-1 md:grid-cols-3">
-                
-                <div class="h-64 md:h-full bg-gray-900 flex items-center justify-center p-4">
-                    <img src="https://via.placeholder.com/400/171717/ffffff?text=JESSICA+L." alt="Student Headshot 1" class="w-full h-full object-cover grayscale transition duration-500 hover:grayscale-0 rounded-lg">
-                </div>
-
-                <div class="md:col-span-2 p-8 md:p-12 flex flex-col justify-center">
-                    <blockquote class="text-xl md:text-3xl font-serif italic leading-relaxed mb-6 border-l-4 border-amber-500 pl-4 md:pl-6">
-                        "Michael’s class fundamentally changed how I approach my work. The environment is challenging but always incredibly supportive. I booked my lead role shortly after joining."
-                    </blockquote>
-                    <div class="mt-4">
-                        <p class="font-bold text-lg tracking-wide uppercase text-amber-500">JESSICA L.</p>
-                        <p class="text-sm text-gray-400">Series Regular, Network Drama</p>
-                    </div>
-                </div>
+    <section class="pb-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="rounded-xl overflow-hidden shadow-2xl bg-black aspect-video flex items-center justify-center">
+                <video 
+                    controls 
+                    playsinline
+                    class="w-full h-full object-contain"
+                >
+                    <source src="https://res.cloudinary.com/dlzyji6ev/video/upload/v1766437041/ClassTestimonial_Version1B_hq7jv2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
-
-        <div class="mb-12 md:mb-20 rounded-xl overflow-hidden shadow-2xl bg-white text-gray-800 border-4 border-gray-200">
-            <div class="grid grid-cols-1 md:grid-cols-3">
-                
-                <div class="h-64 md:h-full bg-gray-100 flex items-center justify-center p-4">
-                    <img src="https://via.placeholder.com/400/e5e5e5/000000?text=MARCUS+D." alt="Student Headshot 2" class="w-full h-full object-cover grayscale transition duration-500 hover:grayscale-0 rounded-lg">
-                </div>
-
-                <div class="md:col-span-2 p-8 md:p-12 flex flex-col justify-center">
-                    <blockquote class="text-xl md:text-3xl font-serif italic leading-relaxed mb-6 border-l-4 border-amber-200 pl-4 md:pl-6">
-                        "I spent ten years training elsewhere, but Michael's specific on-camera technique finally helped me bridge the gap from 'auditioning' to 'working' professionally."
-                    </blockquote>
-                    <div class="mt-4">
-                        <p class="font-bold text-lg tracking-wide uppercase text-gray-900">MARCUS D.</p>
-                        <p class="text-sm text-gray-500">Recurring Guest Star, Streaming Series</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mb-12 md:mb-20 rounded-xl overflow-hidden shadow-2xl bg-white text-gray-800 border-4 border-gray-200">
-            <div class="grid grid-cols-1 md:grid-cols-3">
-                
-                <div class="h-64 md:h-full bg-gray-100 flex items-center justify-center p-4">
-                    <img src="https://via.placeholder.com/400/e5e5e5/000000?text=CHLOE+W." alt="Student Headshot 3" class="w-full h-full object-cover grayscale transition duration-500 hover:grayscale-0 rounded-lg">
-                </div>
-
-                <div class="md:col-span-2 p-8 md:p-12 flex flex-col justify-center">
-                    <blockquote class="text-xl md:text-3xl font-serif italic leading-relaxed mb-6 border-l-4 border-amber-200 pl-4 md:pl-6">
-                        "If you are looking for truth in your work and practical guidance, this is the place. It's truly a safe space for dangerous, deep character exploration."
-                    </blockquote>
-                    <div class="mt-4">
-                        <p class="font-bold text-lg tracking-wide uppercase text-gray-900">CHLOE W.</p>
-                        <p class="text-sm text-gray-500">Film Lead, Indie Film Festival Winner</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </section>
 
-    <section class="py-32 bg-gray-50 border-t border-b border-gray-200 px-6">
+    <section class="py-24 max-w-screen-xl mx-auto px-6 border-t border-gray-100">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+            <div class="flex flex-col">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-amber-400 mr-4">
+                        <img src="https://via.placeholder.com/80/e5e5e5/000000?text=A1" alt="Student" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-900 text-sm tracking-wide uppercase">JESSICA L.</p>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-widest">Network Drama</p>
+                    </div>
+                </div>
+                <blockquote class="text-lg italic text-gray-600 leading-relaxed border-l-2 border-amber-200 pl-4">
+                    "Michael’s class fundamentally changed how I approach my work. The environment is challenging but always supportive."
+                </blockquote>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-amber-400 mr-4">
+                        <img src="https://via.placeholder.com/80/e5e5e5/000000?text=A2" alt="Student" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-900 text-sm tracking-wide uppercase">MARCUS D.</p>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-widest">Streaming Series</p>
+                    </div>
+                </div>
+                <blockquote class="text-lg italic text-gray-600 leading-relaxed border-l-2 border-amber-200 pl-4">
+                    "I spent ten years training elsewhere, but Michael's specific technique finally helped me bridge the gap to working professionally."
+                </blockquote>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-amber-400 mr-4">
+                        <img src="https://via.placeholder.com/80/e5e5e5/000000?text=A3" alt="Student" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-900 text-sm tracking-wide uppercase">CHLOE W.</p>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-widest">Film Lead</p>
+                    </div>
+                </div>
+                <blockquote class="text-lg italic text-gray-600 leading-relaxed border-l-2 border-amber-200 pl-4">
+                    "If you are looking for truth in your work and practical guidance, this is the place. It's truly a safe space for dangerous exploration."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50 border-t border-gray-100 px-6">
         <div class="max-w-screen-xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-6xl font-serif font-bold text-gray-900 mb-2">Watch the Work</h2>
-                <p class="text-xl text-amber-600 italic font-serif">Short messages from the studio floor.</p>
-            </div>
+            <h2 class="text-center text-3xl font-serif font-bold text-gray-900 mb-16">Studio Floor Messages</h2>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-                <div class="rounded-xl overflow-hidden shadow-2xl relative group bg-white">
+                <div class="rounded-xl overflow-hidden shadow-lg bg-white">
                     <div class="aspect-portrait bg-gray-900 flex items-center justify-center">
-                        <svg class="w-1/3 h-auto text-amber-400 opacity-80 group-hover:opacity-100 transition" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+                        <svg class="w-12 h-12 text-amber-400 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
                     </div>
-                    <div class="p-4 bg-white">
-                        <p class="font-bold text-gray-900 text-sm tracking-wide uppercase">MARK S.</p>
-                        <p class="text-xs text-gray-500 mt-1">On-Camera Technique</p>
+                    <div class="p-4">
+                        <p class="font-bold text-gray-900 text-xs tracking-widest uppercase">MARK S.</p>
                     </div>
                 </div>
-
-                <div class="rounded-xl overflow-hidden shadow-2xl relative group bg-white">
-                    <div class="aspect-portrait bg-gray-900 flex items-center justify-center">
-                        <svg class="w-1/3 h-auto text-amber-400 opacity-80 group-hover:opacity-100 transition" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <p class="font-bold text-gray-900 text-sm tracking-wide uppercase">RENEE H.</p>
-                        <p class="text-xs text-gray-500 mt-1">Scene Study Immersion</p>
-                    </div>
                 </div>
-
-                <div class="rounded-xl overflow-hidden shadow-2xl relative group bg-white">
-                    <div class="aspect-portrait bg-gray-900 flex items-center justify-center">
-                        <svg class="w-1/3 h-auto text-amber-400 opacity-80 group-hover:opacity-100 transition" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <p class="font-bold text-gray-900 text-sm tracking-wide uppercase">SAM W.</p>
-                        <p class="text-xs text-gray-500 mt-1">The Audition Process</p>
-                    </div>
-                </div>
-
-                <div class="rounded-xl overflow-hidden shadow-2xl relative group bg-white">
-                    <div class="aspect-portrait bg-gray-900 flex items-center justify-center">
-                        <svg class="w-1/3 h-auto text-amber-400 opacity-80 group-hover:opacity-100 transition" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <p class="font-bold text-gray-900 text-sm tracking-wide uppercase">DAVID C.</p>
-                        <p class="text-xs text-gray-500 mt-1">Finding Character Truth</p>
-                    </div>
-                </div>
-
-            </div>
-            
-            <div class="text-center mt-16">
-                <a href="schedule.html" class="text-lg text-amber-600 font-serif italic hover:text-amber-700 transition underline">
-                    Ready to start your journey? Apply Now &rarr;
-                </a>
-            </div>
         </div>
     </section>
 
-    <footer class="py-20 bg-neutral-950 text-center text-gray-500 text-xs tracking-[0.4em] uppercase">
-        <p>&copy; 2025 Michael Petted Acting Studio &bull; Los Angeles &bull; The Hudson Theatre</p>
+    <footer class="py-20 bg-white text-center text-gray-400 text-[10px] tracking-[0.4em] uppercase border-t border-gray-100">
+        <p>&copy; 2025 Michael Petted Acting Studio &bull; Los Angeles</p>
     </footer>
+
 </body>
 </html>
