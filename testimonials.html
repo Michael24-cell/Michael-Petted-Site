@@ -8,19 +8,13 @@
     <style>
         .font-serif { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
         .font-sans { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
-        
-        .outline-text {
-            -webkit-text-stroke: 1px #e5e7eb;
-            color: transparent;
-            letter-spacing: -0.05em;
-        }
     </style>
 </head>
-<body class="bg-white text-gray-800 font-sans antialiased selection:bg-amber-100">
+<body class="bg-white text-gray-800 font-sans antialiased">
 
     <header class="sticky top-0 left-0 right-0 z-50 p-6 bg-white shadow-md">
         <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <div class="text-2xl font-serif tracking-wide text-gray-900 uppercase">MICHAEL PETTED</div>
+            <a href="index.html" class="text-2xl font-serif tracking-wide text-gray-900 transition duration-300">MICHAEL PETTED</a>
             <div class="space-x-8 hidden md:flex font-medium text-gray-600">
                 <a href="index.html" class="hover:text-amber-600">Home</a>
                 <a href="schedule.html" class="hover:text-amber-600">Schedule & Rates</a>
@@ -33,28 +27,21 @@
         </nav>
     </header>
 
-    <section class="relative pt-24 pb-16 overflow-hidden">
-        <div class="absolute inset-0 flex items-center justify-center -z-10 select-none">
-            <span class="outline-text text-7xl md:text-9xl font-serif font-black opacity-30 uppercase">
-                Industry
-            </span>
-        </div>
-        <div class="max-w-7xl mx-auto px-6 text-center relative">
-            <span class="text-amber-600 text-[10px] tracking-[0.4em] uppercase font-bold mb-3 block">Professional Recognition</span>
-            <h1 class="text-5xl md:text-7xl font-serif font-bold text-gray-900 leading-tight uppercase tracking-tight">
-                Hear it from the industry.
-            </h1>
-            <p class="mt-6 text-lg md:text-xl text-gray-500 font-serif italic max-w-xl mx-auto border-t border-gray-100 pt-6">
-                Proven results from leading actors, directors, and producers working at the highest level of the craft.
-            </p>
-        </div>
-    </section>
+    <section class="pt-24 pb-12 text-center px-6">
+        <section class="pt-8 md:pt-12 pb-24 md:pb-32 text-center bg-gray-50 border-b border-gray-200">                <h1 class="text-5xl md:text-6xl font-serif font-extrabold text-gray-900">
+                    Hear It From The Industry
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl text-amber-600 font-semibold italic">
+                    What they're saying about the work.
+                </p>
+            </div>
+        </section>
 
     <section class="py-12 max-w-6xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <div class="w-32 h-32 md:w-36 md:h-36 shrink-0 mb-6 md:mb-0 md:mr-8">
-                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_auto/v1767133549/Screenshot_2025-12-30_at_2.25.42_PM_gkeeyy.jpg" alt="Beth Grant" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto/v1767133549/Screenshot_2025-12-30_at_2.25.42_PM_gkeeyy.jpg" alt="Beth Grant" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
                 </div>
                 <div class="flex flex-col text-center md:text-left">
                     <div class="mb-4">
@@ -69,7 +56,7 @@
 
             <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <div class="w-32 h-32 md:w-36 md:h-36 shrink-0 mb-6 md:mb-0 md:mr-8">
-                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_auto/v1767134165/Screenshot_2025-12-30_at_2.35.59_PM_incpon.png" alt="Howie Deutch" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto/v1767134165/Screenshot_2025-12-30_at_2.35.59_PM_incpon.jpg" alt="Howie Deutch" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
                 </div>
                 <div class="flex flex-col text-center md:text-left">
                     <div class="mb-4">
@@ -106,7 +93,7 @@
             
             <div class="mt-8 text-center">
                 <p class="text-lg font-serif italic text-gray-500 max-w-2xl mx-auto">
-                    "Watching the breakthrough: A firsthand look at the work being done in Michael’s studio."
+                    "Watching the breakthrough: A firsthand look at the work being done in Michael's studio."
                 </p>
             </div>
         </div>
@@ -115,7 +102,7 @@
     <section class="py-20 max-w-4xl mx-auto px-6 mb-12">
         <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-amber-600">
             <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 mb-6 md:mb-0 md:mr-10">
-                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/v1767135349/Screenshot_2025-12-30_at_2.55.42_PM_mcj1fm.png" alt="Shereen Khan" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto/v1767135349/Screenshot_2025-12-30_at_2.55.42_PM_mcj1fm.jpg" alt="Shereen Khan" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
             </div>
             <div class="flex flex-col text-center md:text-left">
                 <div class="mb-6">
@@ -123,14 +110,14 @@
                     <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">The Promised Land (Series)</p>
                 </div>
                 <blockquote class="text-lg font-serif italic text-gray-700 leading-relaxed">
-                    "Long overdue shoutout to Michael Petted, the phenomenal acting teacher who’s coached me on this series (The Promised Land) and whose weekly scene study class is such enrichment and pure creative joy. I’m so grateful for the creative wisdom he imparts and for the incredible cohort of actors there. Actors looking to train that thing you do that makes your work unique, look no further! Join us Wednesdays at Hudson Theatres."
+                    "Long overdue shoutout to Michael Petted, the phenomenal acting teacher who's coached me on this series (The Promised Land) and whose weekly scene study class is such enrichment and pure creative joy. I'm so grateful for the creative wisdom he imparts and for the incredible cohort of actors there. Actors looking to train that thing you do that makes your work unique, look no further! Join us Wednesdays at Hudson Theatres."
                 </blockquote>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-white text-center text-gray-400 text-[10px] tracking-[0.4em] uppercase border-t border-gray-100">
-        <p>&copy; 2025 Michael Petted Acting Studio &bull; Los Angeles</p>
+    <footer class="py-8 bg-gray-100 text-center text-gray-500 text-sm border-t border-gray-200">
+        <p>Michael Petted Acting Studio. Los Angeles, CA. | &copy; 2025</p>
     </footer>
 
 </body>
