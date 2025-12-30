@@ -9,14 +9,18 @@
         .font-serif { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
         .font-sans { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
         
-        .aspect-portrait { aspect-ratio: 4 / 5; }
+        .outline-text {
+            -webkit-text-stroke: 1px #e5e7eb;
+            color: transparent;
+            letter-spacing: -0.05em;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800 font-sans antialiased selection:bg-amber-100">
 
     <header class="sticky top-0 left-0 right-0 z-50 p-6 bg-white shadow-md">
         <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <div class="text-2xl font-serif tracking-wide text-gray-900">MICHAEL PETTED</div>
+            <div class="text-2xl font-serif tracking-wide text-gray-900 uppercase">MICHAEL PETTED</div>
             <div class="space-x-8 hidden md:flex font-medium text-gray-600">
                 <a href="index.html" class="hover:text-amber-600">Home</a>
                 <a href="schedule.html" class="hover:text-amber-600">Schedule & Rates</a>
@@ -29,97 +33,104 @@
         </nav>
     </header>
 
-    <section class="pt-24 pb-12 text-center px-6">
-        <div class="max-w-5xl mx-auto">
-            <span class="text-amber-600 text-xs tracking-[0.3em] uppercase font-bold mb-4 block">What they're saying</span>
-            <h1 class="text-6xl md:text-8xl font-serif font-bold text-gray-900 leading-none mb-8">The Results.</h1>
+    <section class="relative pt-24 pb-16 overflow-hidden">
+        <div class="absolute inset-0 flex items-center justify-center -z-10 select-none">
+            <span class="outline-text text-7xl md:text-9xl font-serif font-black opacity-30 uppercase">
+                Industry
+            </span>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 text-center relative">
+            <span class="text-amber-600 text-[10px] tracking-[0.4em] uppercase font-bold mb-3 block">Professional Recognition</span>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-gray-900 leading-tight uppercase tracking-tight">
+                Hear it from the industry.
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-gray-500 font-serif italic max-w-xl mx-auto border-t border-gray-100 pt-6">
+                Proven results from leading actors, directors, and producers working at the highest level of the craft.
+            </p>
         </div>
     </section>
 
-    <section class="pb-24 px-6">
+    <section class="py-12 max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-32 h-32 md:w-36 md:h-36 shrink-0 mb-6 md:mb-0 md:mr-8">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_auto/v1767133549/Screenshot_2025-12-30_at_2.25.42_PM_gkeeyy.jpg" alt="Beth Grant" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+                </div>
+                <div class="flex flex-col text-center md:text-left">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-serif font-bold text-gray-900 uppercase">BETH GRANT</h3>
+                        <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">Acclaimed Actress</p>
+                    </div>
+                    <blockquote class="text-lg font-serif italic text-gray-600 leading-relaxed">
+                        "Seriously one of the best actors I've ever worked with in my life. Anyone lucky enough to study with him is lucky indeed! ❤️"
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-32 h-32 md:w-36 md:h-36 shrink-0 mb-6 md:mb-0 md:mr-8">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_auto/v1767134165/Screenshot_2025-12-30_at_2.35.59_PM_incpon.png" alt="Howie Deutch" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+                </div>
+                <div class="flex flex-col text-center md:text-left">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-serif font-bold text-gray-900 uppercase">HOWIE DEUTCH</h3>
+                        <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">Director / Producer</p>
+                    </div>
+                    <blockquote class="text-lg font-serif italic text-gray-600 leading-relaxed">
+                        "Michael's innate understanding of the actor's process is profound. He knows how to get results that translate powerfully to the screen."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 border-t border-gray-100 bg-gray-50">
         <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center mb-10">
+                <span class="text-amber-600 text-[10px] tracking-[0.3em] uppercase font-bold mb-2 block">The Student Experience</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-2 uppercase tracking-tight">Braxton Angle</h2>
+                <div class="flex items-center justify-center space-x-3 mb-6">
+                    <div class="h-[1px] w-8 bg-amber-400"></div>
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-gray-500 font-bold italic">Featured Student Breakthrough</span>
+                    <div class="h-[1px] w-8 bg-amber-400"></div>
+                </div>
+            </div>
+            
             <div class="rounded-xl overflow-hidden shadow-2xl bg-black aspect-video flex items-center justify-center">
-                <video 
-                    controls 
-                    playsinline
-                    class="w-full h-full object-contain"
-                >
+                <video controls playsinline class="w-full h-full object-contain">
                     <source src="https://res.cloudinary.com/dlzyji6ev/video/upload/v1766437041/ClassTestimonial_Version1B_hq7jv2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-        </div>
-    </section>
-
-    <section class="py-24 max-w-screen-xl mx-auto px-6 border-t border-gray-100">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-
-            <div class="flex flex-col">
-                <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-amber-400 mr-4">
-                        <img src="https://via.placeholder.com/80/e5e5e5/000000?text=A1" alt="Student" class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900 text-sm tracking-wide uppercase">JESSICA L.</p>
-                        <p class="text-[10px] text-gray-400 uppercase tracking-widest">Network Drama</p>
-                    </div>
-                </div>
-                <blockquote class="text-lg italic text-gray-600 leading-relaxed border-l-2 border-amber-200 pl-4">
-                    "Michael's class fundamentally changed how I approach my work. The environment is challenging but always supportive."
-                </blockquote>
-            </div>
-
-            <div class="flex flex-col">
-                <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-amber-400 mr-4">
-                        <img src="https://via.placeholder.com/80/e5e5e5/000000?text=A2" alt="Student" class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900 text-sm tracking-wide uppercase">MARCUS D.</p>
-                        <p class="text-[10px] text-gray-400 uppercase tracking-widest">Streaming Series</p>
-                    </div>
-                </div>
-                <blockquote class="text-lg italic text-gray-600 leading-relaxed border-l-2 border-amber-200 pl-4">
-                    "I spent ten years training elsewhere, but Michael's specific technique finally helped me bridge the gap to working professionally."
-                </blockquote>
-            </div>
-
-            <div class="flex flex-col">
-                <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-amber-400 mr-4">
-                        <img src="https://via.placeholder.com/80/e5e5e5/000000?text=A3" alt="Student" class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900 text-sm tracking-wide uppercase">CHLOE W.</p>
-                        <p class="text-[10px] text-gray-400 uppercase tracking-widest">Film Lead</p>
-                    </div>
-                </div>
-                <blockquote class="text-lg italic text-gray-600 leading-relaxed border-l-2 border-amber-200 pl-4">
-                    "If you are looking for truth in your work and practical guidance, this is the place. It's truly a safe space for dangerous exploration."
-                </blockquote>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-gray-50 border-t border-gray-100 px-6">
-        <div class="max-w-screen-xl mx-auto">
-            <h2 class="text-center text-3xl font-serif font-bold text-gray-900 mb-16">Studio Floor Messages</h2>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="rounded-xl overflow-hidden shadow-lg bg-white">
-                    <div class="aspect-portrait bg-gray-900 flex items-center justify-center">
-                        <svg class="w-12 h-12 text-amber-400 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-                    </div>
-                    <div class="p-4">
-                        <p class="font-bold text-gray-900 text-xs tracking-widest uppercase">MARK S.</p>
-                    </div>
-                </div>
+            <div class="mt-8 text-center">
+                <p class="text-lg font-serif italic text-gray-500 max-w-2xl mx-auto">
+                    "Watching the breakthrough: A firsthand look at the work being done in Michael’s studio."
+                </p>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 bg-gray-100 text-center text-gray-500 text-sm border-t border-gray-200">
-        <p>Michael Petted Acting Studio. Los Angeles, CA. | &copy; 2025</p>
+    <section class="py-20 max-w-4xl mx-auto px-6 mb-12">
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-amber-600">
+            <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 mb-6 md:mb-0 md:mr-10">
+                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/v1767135349/Screenshot_2025-12-30_at_2.55.42_PM_mcj1fm.png" alt="Shereen Khan" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+            </div>
+            <div class="flex flex-col text-center md:text-left">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-serif font-bold text-gray-900 uppercase leading-none mb-1">SHEREEN KHAN</h3>
+                    <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">The Promised Land (Series)</p>
+                </div>
+                <blockquote class="text-lg font-serif italic text-gray-700 leading-relaxed">
+                    "Long overdue shoutout to Michael Petted, the phenomenal acting teacher who’s coached me on this series (The Promised Land) and whose weekly scene study class is such enrichment and pure creative joy. I’m so grateful for the creative wisdom he imparts and for the incredible cohort of actors there. Actors looking to train that thing you do that makes your work unique, look no further! Join us Wednesdays at Hudson Theatres."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-white text-center text-gray-400 text-[10px] tracking-[0.4em] uppercase border-t border-gray-100">
+        <p>&copy; 2025 Michael Petted Acting Studio &bull; Los Angeles</p>
     </footer>
 
 </body>
