@@ -8,50 +8,47 @@
     <style>
         .font-serif { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
         .font-sans { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+        
+        /* New Sticker Styling */
+        .testimonial-sticker {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            border: 3px solid #d97706; /* Amber-600 */
+            background-color: rgba(0, 0, 0, 0.2); 
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            text-decoration: none !important;
+        }
+        .testimonial-sticker:hover {
+            transform: scale(1.03);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800 font-sans antialiased">
 
     <header class="sticky top-0 left-0 right-0 z-50 p-6 bg-white shadow-md">
         <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <a href="index.html" class="text-2xl font-serif tracking-wide text-gray-900">MICHAEL PETTED</a>
-            
-            <!-- Desktop Navigation -->
+            <div class="text-2xl font-serif tracking-wide text-gray-900">MICHAEL PETTED</div>
             <div class="space-x-8 hidden md:flex font-medium text-gray-600">
                 <a href="index.html" class="text-amber-600 border-b-2 border-amber-600">Home</a>
                 <a href="schedule.html" class="hover:text-amber-600">Schedule & Rates</a>
                 <a href="testimonials.html" class="hover:text-amber-600">Testimonials</a>
                 <a href="about.html" class="hover:text-amber-600">About Michael</a>
             </div>
-            
-            <!-- Mobile Menu Button -->
-            <button id="mobileMenuBtn" class="md:hidden text-gray-600 hover:text-amber-600 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-            
-            <a href="schedule.html" class="hidden md:inline-block text-white bg-amber-600 px-5 py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-md">
+            <a href="schedule.html" class="text-white bg-amber-600 px-5 py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-md">
                 Register Now
             </a>
         </nav>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100">
-            <div class="flex flex-col space-y-3 mt-4">
-                <a href="index.html" class="text-amber-600 font-medium py-2 border-b border-gray-100">Home</a>
-                <a href="schedule.html" class="text-gray-600 hover:text-amber-600 font-medium py-2 border-b border-gray-100">Schedule & Rates</a>
-                <a href="testimonials.html" class="text-gray-600 hover:text-amber-600 font-medium py-2 border-b border-gray-100">Testimonials</a>
-                <a href="about.html" class="text-gray-600 hover:text-amber-600 font-medium py-2 border-b border-gray-100">About Michael</a>
-                <a href="schedule.html" class="text-white bg-amber-600 px-5 py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-md text-center mt-2">
-                    Register Now
-                </a>
-            </div>
-        </div>
-    </header>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="min-h-screen flex items-center justify-center text-center bg-cover bg-center relative" 
         style="background-image: url('https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_auto,w_1920/v1764923144/IMG_8022_wfammf.jpg');">
         <div class="absolute inset-0 bg-gray-900/50"></div> 
@@ -68,6 +65,14 @@
             <a href="#the-teacher" class="mt-10 inline-block text-lg text-white border-2 border-amber-400 bg-amber-600/10 backdrop-blur-sm px-8 py-3 rounded-full hover:bg-amber-700 hover:text-white transition duration-300 font-medium">
                 Explore The Studio
             </a>
+            
+          <a href="testimonials.html" class="absolute bottom-4 right-4 md:bottom-10 md:right-10 z-20 hidden md:block">
+            <div class="testimonial-sticker">
+                <img loading="lazy" src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto,w_100/v1767133549/Screenshot_2025-12-30_at_2.25.42_PM_gkeeyy.jpg" alt="Beth Grant" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-amber-500">
+                <p class="font-bold text-sm text-white uppercase tracking-widest">Beth Grant</p>
+                <p class="text-lg text-white italic mt-2 leading-tight font-serif px-2">"Seriously one of the best actors I've ever worked with in my life..."</p>
+            </div>
+          </a>
         </div>
     </section>
 
