@@ -6,97 +6,168 @@
     <title>Class Schedule & Rates - Michael Petted Acting Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .font-serif { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
+        .font-serif { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
         .font-sans { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
     </style>
 </head>
-<body class="bg-white text-gray-800 font-sans antialiased">
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden w-full max-w-[100vw]">
 
-    <header class="sticky top-0 left-0 right-0 z-50 p-6 bg-white shadow-md">
-        <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <a href="index.html" class="text-2xl font-serif tracking-wide text-gray-900 transition duration-300">MICHAEL PETTED</a>
+    <header class="sticky top-0 left-0 right-0 z-50 bg-white shadow-md w-full overflow-x-hidden">
+        <div class="h-16 md:h-auto md:p-6 flex items-center">
+        <nav class="grid grid-cols-[auto_1fr_auto] md:flex md:justify-between items-center max-w-7xl mx-auto w-full px-2 gap-2">
+            <!-- Mobile: Hamburger Menu Button (Far Left) -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1.5 p-2 focus:outline-none z-50 flex-shrink-0 h-8 justify-center">
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+            </button>
+            
+            <!-- Logo (Centered on mobile, left on desktop) -->
+            <a href="index.html" class="text-sm md:text-2xl font-serif tracking-tight md:tracking-wide text-gray-900 flex-shrink-0 text-center md:text-left whitespace-nowrap justify-self-center">MICHAEL PETTED ACTING STUDIO</a>
+            
+            <!-- Desktop Navigation -->
             <div class="space-x-8 hidden md:flex font-medium text-gray-600">
                 <a href="index.html" class="hover:text-amber-600">Home</a>
-                <a href="schedule.html" class="text-amber-600 border-b-2 border-amber-600">Schedule & Rates</a>
+                <a href="schedule.html" class="text-amber-600 border-b-2 border-amber-600">Schedule & Enroll</a>
                 <a href="testimonials.html" class="hover:text-amber-600">Testimonials</a>
                 <a href="about.html" class="hover:text-amber-600">About Michael</a>
             </div>
-            <a href="schedule.html" class="text-white bg-amber-600 px-5 py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-md">
-                Register Now
+            
+            <!-- Enroll Button (Right side) -->
+            <a href="schedule.html" class="text-white bg-amber-600 px-2 py-2 md:px-5 md:py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-sm text-xs md:text-base whitespace-nowrap flex-shrink-0 h-8 flex items-center justify-center justify-self-end">
+                Enroll
             </a>
         </nav>
+        </div>
+        
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden mx-2 mb-4 bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+            <div class="flex flex-col space-y-0">
+                <a href="index.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Home</a>
+                <a href="schedule.html" class="px-6 py-3 text-amber-600 bg-amber-50 border-b border-amber-200 font-semibold">Schedule & Enroll</a>
+                <a href="testimonials.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Testimonials</a>
+                <a href="about.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition">About Michael</a>
+            </div>
+        </div>
     </header>
 
-    <section class="py-24 md:py-32 text-center bg-gray-50 border-b border-gray-200 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-6xl font-serif font-extrabold text-gray-900">
-                Current Class Schedule & Tuition
-            </h1>
-            <p class="mt-4 text-xl md:text-2xl text-amber-600 font-semibold italic">
-                Scene Study and On-Camera Training at The Hudson Theatre, Los Angeles.
-            </p>
+    <section class="relative w-full h-[40vh] md:h-[50vh] overflow-hidden" style="background-color: #0c4a6e;">
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center px-4 w-full">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-extrabold text-white mb-4 md:mb-6 leading-tight">
+                    Class Schedule & Enroll
+                </h1>
+                <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-amber-400 font-semibold italic leading-relaxed max-w-3xl mx-auto">
+                    Scene Study and On-Camera Training at The Hudson Theatre, Los Angeles.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section class="py-24 max-w-6xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
+    <section class="w-full py-12 md:py-16 lg:py-24 max-w-6xl mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 mb-24">
             
-            <div class="p-8 border-t-4 border-amber-600 shadow-xl rounded-lg bg-amber-50">
-                <h3 class="text-3xl font-bold text-gray-900 mb-2">Scene Study (Ongoing)</h3>
+            <div class="p-8 border-t-4 border-amber-600 shadow-xl rounded-lg bg-amber-50 flex flex-col h-full">
+                <h3 class="text-3xl font-bold text-gray-900 mb-2">Scene Study Class (Ongoing)</h3>
                 <p class="text-gray-500 mb-6 font-medium tracking-wide">Wednesday Evenings</p>
                 <ul class="space-y-3 text-gray-600 mb-8 border-t border-amber-200 pt-6">
                     <li><strong>Time:</strong> 7:00 PM – 11:00 PM</li>
                     <li><strong>Rate:</strong> $250 per month (4 classes)</li>
-                    <li><strong>Location:</strong> The Hudson Theatre, Los Angeles</li>
+                    <li><strong>Location:</strong> The Hudson Theatre, 6539 Santa Monica Blvd. Los Angeles, CA 90038</li>
                 </ul>
-                <a href="mailto:info@michaelpetted.com" class="block w-full text-center text-white bg-amber-600 px-5 py-3 rounded-md hover:bg-amber-700 font-semibold shadow transition">Apply for Waitlist</a>
+                <a href="mailto:mpettedstudio@gmail.com" class="mt-auto block w-full text-center text-white bg-amber-600 px-5 py-3 rounded-md hover:bg-amber-700 font-semibold shadow transition">Email to Enroll</a>
             </div>
 
-            <div class="p-8 border border-gray-200 rounded-lg bg-white flex flex-col">
-                <h3 class="text-2xl font-bold text-amber-600 mb-4">Audit & Registration</h3>
-                <p class="text-gray-600 mb-6 leading-relaxed">All classes require an audit or interview before enrollment</p>
+            <div class="p-8 border-t-4 border-amber-600 shadow-xl rounded-lg bg-white flex flex-col h-full">
+                <h3 class="text-3xl font-bold text-gray-900 mb-2">Audit & Registration</h3>
+                <p class="text-gray-500 mb-6 font-medium tracking-wide">Begin Your Journey</p>
                 <div class="bg-gray-50 p-6 rounded-md border border-gray-100">
-                    <p class="text-lg font-bold text-gray-800 mb-4">How to begin:</p>
-                    <ol class="list-decimal list-inside space-y-4 text-gray-600 font-medium">
-                        <li>Email mpetted@gmail.com for information, or schedule a brief introductory phone call</li>
-                        <li>Attend a scheduled class audit to observe the process.</li>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="pl-3 -indent-3">• Email <a href="mailto:mpettedstudio@gmail.com" class="text-amber-600 hover:text-amber-700 font-semibold underline">mpettedstudio@gmail.com</a> for info or to schedule a class audit</li>
+                        <li class="pl-3 -indent-3">• All class enrollments require an interview before&nbsp;starting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="p-8 border border-gray-200 rounded-lg bg-white flex flex-col h-full md:col-span-2 lg:col-span-2">
+                <h3 class="text-2xl font-bold text-amber-600 mb-4">Private Audition Coaching</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">One-on-one sessions designed to elevate your craft. Online or in person at the Hudson Theatre.</p>
+                <div class="bg-gray-50 p-6 rounded-md border border-gray-100">
+                    <p class="text-lg font-bold text-gray-800 mb-4">Session Details:</p>
+                    <ol class="list-decimal list-outside space-y-4 text-gray-600 font-medium ml-5 pl-2">
+                        <li>Flexible scheduling to fit your availability</li>
+                        <li>Hourly rates available upon inquiry - email <a href="mailto:mpettedstudio@gmail.com" class="text-amber-600 hover:text-amber-700 underline font-semibold">mpettedstudio@gmail.com</a> to book a session</li>
                     </ol>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="pt-16 border-t border-gray-200">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-serif font-bold text-gray-900 mb-4 uppercase tracking-wider">The Work in Progress</h2>
-                <div class="w-24 h-1 bg-amber-400 mx-auto"></div>
-            </div>
+    <section class="w-full py-8 md:py-12 lg:py-16 max-w-6xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4 uppercase tracking-wider">The Work in Progress</h2>
+            <div class="w-24 h-1 bg-amber-400 mx-auto"></div>
+        </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 h-64">
-                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/v1764924566/FB7C2AC6-B01C-4EDA-B391-24A48C8ED7EA_npyicj.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Dynamic scene work">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1764924566/FB7C2AC6-B01C-4EDA-B391-24A48C8ED7EA_npyicj.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Actors performing an intense scene in class">
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 h-64">
-                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/v1764923171/IMG_8357_g9y5q4.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Ensemble performance">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1770089251/IMG_9482_to6ujn.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Group of actors performing together in class">
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 h-64">
-                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/v1764923168/IMG_8355_vzhn9b.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Intense instruction">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769294883/IMG_2108_jrpwxr.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Actor receiving feedback during class">
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 h-64">
-                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/v1764923197/IMG_8724_elk8pl.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Moment of truth">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1770089258/IMG_9473_yjpqwe.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Actor in an emotional moment during class">
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 h-64">
-                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/v1764923186/IMG_8497_k4syv7.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Process shot">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1764923171/IMG_8357_g9y5q4.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Actors rehearsing a scene in class">
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 h-64">
-                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/v1764924560/IMG_7674_e7182j.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Captured authenticity">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1768099835/IMG_7542_bmpoi0.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Actor performing authentically in class">
                 </div>
-            </div>
-            <p class="text-center mt-12 text-gray-500 font-medium">Capturing truth, artistry, and practical technique at The Hudson Theatre.</p>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 h-64">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1770090348/C099EF61-9836-492B-9A14-1E0E9157734A_srluug.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Actors actively working on scenes in class">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 h-64">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1768099835/IMG_3003_mdelcn.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Michael Petted coaching actors during class">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 h-64">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769297275/B0612546-05D5-4EA2-8205-1D8B2D7D1161_yicr8x.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Actors in class at the studio">
+                </div>
         </div>
+        <p class="text-center mt-12 text-gray-500 font-medium">Capturing truth, artistry, and practical technique at The Hudson Theatre.</p>
     </section>
 
     <footer class="py-12 bg-gray-100 text-center text-gray-500 text-sm border-t border-gray-200">
-        <p>Michael Petted Acting Studio | &copy; 2025</p>
+        <p class="mb-2">Michael Petted Acting Studio | &copy; 2026 All Rights Reserved.</p>
+        <p class="text-xs">
+            <a href="terms.html" class="text-amber-600 hover:text-amber-700">Terms of Use</a> | 
+            <a href="privacy.html" class="text-amber-600 hover:text-amber-700">Privacy Policy</a>
+        </p>
     </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
 </body>
 </html>

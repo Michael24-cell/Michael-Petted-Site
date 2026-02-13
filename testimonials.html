@@ -4,45 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials - Michael Petted Acting Studio</title>
+    <link rel="preload" as="image" href="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_65,w_1400/v1764924546/IMG_5537_zmd9bx.jpg" fetchpriority="high">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .font-serif { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
+        .font-serif { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
         .font-sans { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
     </style>
 </head>
-<body class="bg-white text-gray-800 font-sans antialiased">
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden w-full max-w-[100vw]">
 
-    <header class="sticky top-0 left-0 right-0 z-50 p-6 bg-white shadow-md">
-        <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <a href="index.html" class="text-2xl font-serif tracking-wide text-gray-900 transition duration-300">MICHAEL PETTED</a>
+    <header class="sticky top-0 left-0 right-0 z-50 bg-white shadow-md w-full overflow-x-hidden">
+        <div class="h-16 md:h-auto md:p-6 flex items-center">
+        <nav class="grid grid-cols-[auto_1fr_auto] md:flex md:justify-between items-center max-w-7xl mx-auto w-full px-2 gap-2">
+            <!-- Mobile: Hamburger Menu Button (Far Left) -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1.5 p-2 focus:outline-none z-50 flex-shrink-0 h-8 justify-center">
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+            </button>
+            
+            <!-- Logo (Centered on mobile, left on desktop) -->
+            <a href="index.html" class="text-sm md:text-2xl font-serif tracking-tight md:tracking-wide text-gray-900 flex-shrink-0 text-center md:text-left whitespace-nowrap justify-self-center">MICHAEL PETTED ACTING STUDIO</a>
+            
+            <!-- Desktop Navigation -->
             <div class="space-x-8 hidden md:flex font-medium text-gray-600">
                 <a href="index.html" class="hover:text-amber-600">Home</a>
-                <a href="schedule.html" class="hover:text-amber-600">Schedule & Rates</a>
+                <a href="schedule.html" class="hover:text-amber-600">Schedule & Enroll</a>
                 <a href="testimonials.html" class="text-amber-600 border-b-2 border-amber-600">Testimonials</a>
                 <a href="about.html" class="hover:text-amber-600">About Michael</a>
             </div>
-            <a href="schedule.html" class="text-white bg-amber-600 px-5 py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-md">
-                Register Now
+            
+            <!-- Enroll Button (Right side) -->
+            <a href="schedule.html" class="text-white bg-amber-600 px-2 py-2 md:px-5 md:py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-sm text-xs md:text-base whitespace-nowrap flex-shrink-0 h-8 flex items-center justify-center justify-self-end">
+                Enroll
             </a>
         </nav>
+        </div>
+        
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden mx-2 mb-4 bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+            <div class="flex flex-col space-y-0">
+                <a href="index.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Home</a>
+                <a href="schedule.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Schedule & Enroll</a>
+                <a href="testimonials.html" class="px-6 py-3 text-amber-600 bg-amber-50 border-b border-amber-200 font-semibold">Testimonials</a>
+                <a href="about.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition">About Michael</a>
+            </div>
+        </div>
     </header>
 
-    <section class="py-24 md:py-32 text-center bg-gray-50 border-b border-gray-200">
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-5xl md:text-6xl font-serif font-extrabold text-gray-900">
-                Hear It From The Industry
-            </h1>
-            <p class="mt-4 text-xl md:text-2xl text-amber-600 font-semibold italic">
-                What they're saying about the work.
-            </p>
+    <section class="relative w-full h-[40vh] md:h-[50vh] overflow-hidden">
+        <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_65,w_1400/v1764924546/IMG_5537_zmd9bx.jpg" 
+             alt="Actors performing on stage in class" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center px-4 md:px-6 max-w-5xl w-full">
+                <h1 class="text-3xl md:text-5xl lg:text-7xl font-serif font-extrabold text-white mb-6" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">
+                    Hear It From The Industry
+                </h1>
+                <p class="text-xl md:text-2xl lg:text-3xl text-amber-400 font-semibold italic" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6);">
+                    What they're saying about the work.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section class="py-12 max-w-6xl mx-auto px-6">
+    <section class="w-full py-12 max-w-6xl mx-auto px-4 md:px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                <div class="w-32 h-32 md:w-36 md:h-36 shrink-0 mb-6 md:mb-0 md:mr-8">
-                    <img loading="lazy" src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto/v1767133549/Screenshot_2025-12-30_at_2.25.42_PM_gkeeyy.jpg" alt="Beth Grant" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+                <div class="w-32 h-32 md:w-36 md:h-36 shrink-0 mb-6 md:mb-0 md:mr-8 overflow-hidden rounded-xl shadow-md border border-gray-50">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,c_fill,g_face,w_400,h_400/v1767133549/Screenshot_2025-12-30_at_2.25.42_PM_gkeeyy.jpg" alt="Beth Grant" class="w-full h-full object-cover scale-110">
                 </div>
                 <div class="flex flex-col text-center md:text-left">
                     <div class="mb-4">
@@ -50,30 +81,39 @@
                         <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">Acclaimed Actress</p>
                     </div>
                     <blockquote class="text-lg font-serif italic text-gray-600 leading-relaxed">
-                        "Seriously one of the best actors I've ever worked with in my life. Anyone lucky enough to study with him is lucky indeed! ❤️"
+                        "Michael is seriously one of the best actors I've ever worked with in my life. Anyone lucky enough to study with him is lucky indeed! ❤️"
                     </blockquote>
+                    <div class="mt-1 pt-1 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">
+                            <span class="font-semibold text-gray-700">–</span>Speed, No Country for Old Men, Rainman, Donnie Darko, Little Miss Sunshine
+                        </p>
+                    </div>
                 </div>
             </div>
 
-
             <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <div class="w-32 h-32 md:w-36 md:h-36 shrink-0 mb-6 md:mb-0 md:mr-8 overflow-hidden rounded-xl shadow-md border border-gray-50">
-                    <img loading="lazy" src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto,c_fill,g_face,w_400,h_400/v1767265164/Screenshot_2026-01-01_at_2.59.16_AM_q5erzf.jpg" alt="Howard Deutch" class="w-full h-full object-cover scale-110">
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,c_fill,g_face,w_400,h_400/v1767265164/Screenshot_2026-01-01_at_2.59.16_AM_q5erzf.jpg" alt="Howard Deutch" class="w-full h-full object-cover scale-110">
                 </div>
                 <div class="flex flex-col text-center md:text-left">
                     <div class="mb-4">
                         <h3 class="text-xl font-serif font-bold text-gray-900 uppercase">HOWARD DEUTCH</h3>
-                        <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">RenownedDirector / Producer</p>
+                        <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">Director / Producer</p>
                     </div>
                     <blockquote class="text-lg font-serif italic text-gray-600 leading-relaxed">
                         "Michael's innate understanding of the actor's process is profound. He knows how to get results that translate powerfully to the screen."
                     </blockquote>
+                    <div class="mt-1 pt-1 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">
+                            <span class="font-semibold text-gray-700">–</span>Pretty in Pink, Some Kind of Wonderful, The Replacements, True Blood, Young Sheldon
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 border-t border-gray-100 bg-gray-50">
+    <section class="py-12 md:py-16 lg:py-20 px-4 md:px-6 border-t border-gray-100 bg-gray-50 w-full overflow-hidden">
         <div class="max-w-4xl mx-auto">
             
             <div class="text-center mb-10">
@@ -97,30 +137,167 @@
                 <p class="text-lg font-serif italic text-gray-500 max-w-2xl mx-auto">
                     "Watching the breakthrough: A firsthand look at the work being done in Michael's studio."
                 </p>
+                <div class="mt-6 pt-6 border-t border-gray-200 inline-block">
+                    <p class="text-sm text-gray-500">
+                        <span class="font-semibold text-gray-700">–</span>A Wedding for Belle, My Husbands Other Face, Christmas with Felicity
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-
-    <section class="py-20 max-w-4xl mx-auto px-6 mb-12">
+    <section class="pt-20 pb-6 max-w-4xl mx-auto px-6">
         <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-amber-600">
             <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 mb-6 md:mb-0 md:mr-10">
-                <img loading="lazy" src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto/v1767135349/Screenshot_2025-12-30_at_2.55.42_PM_mcj1fm.jpg" alt="Shereen Khan" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_300/v1767135349/Screenshot_2025-12-30_at_2.55.42_PM_mcj1fm.jpg" alt="Shereen Khan" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
             </div>
             <div class="flex flex-col text-center md:text-left">
                 <div class="mb-6">
                     <h3 class="text-2xl font-serif font-bold text-gray-900 uppercase leading-none mb-1">SHEREEN KHAN</h3>
-                    <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">The Promised Land (Series)</p>
+                    <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">Actress<br><span class="block mt-1">Series Regular on The Promised Land</span></p>
                 </div>
                 <blockquote class="text-lg font-serif italic text-gray-700 leading-relaxed">
                     "Long overdue shoutout to Michael Petted, the phenomenal acting teacher who's coached me on this series (The Promised Land) and whose weekly scene study class is such enrichment and pure creative joy. I'm so grateful for the creative wisdom he imparts and for the incredible cohort of actors there. Actors looking to train that thing you do that makes your work unique, look no further! Join us Wednesdays at Hudson Theatres."
                 </blockquote>
+                <div class="mt-1 pt-1 border-t border-gray-100">
+                    <p class="text-sm text-gray-500">
+                        <span class="font-semibold text-gray-700">–</span>The Studio, The Chosen, S.W.A.T.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-6 pb-6 max-w-4xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-amber-600">
+            <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 mb-6 md:mb-0 md:mr-10">
+                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/v1770666907/Screenshot_2026-02-09_at_11.55.01_AM_qua8t6.png" alt="Dominick Larae" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+            </div>
+            <div class="flex flex-col text-center md:text-left">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-serif font-bold text-gray-900 uppercase leading-none mb-1">DOMINICK LARAE</h3>
+                    <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">Actor</p>
+                </div>
+                <blockquote class="text-lg font-serif italic text-gray-700 leading-relaxed">
+                    "What I love about Michael's teaching style is that, through his unrelenting passion and focus for acting and teaching — which I think is his superpower — he combines Milton Katselas's empowering acting techniques with his own sensibilities and passion for the art of acting. Which I love. I think Michael is an amazing f**kin' teacher. Full stop."
+                </blockquote>
+                <div class="mt-1 pt-1 border-t border-gray-100">
+                    <p class="text-sm text-gray-500">
+                        <span class="font-semibold text-gray-700">–</span>24, Prime Suspect, Training Day
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-6 pb-6 max-w-4xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-amber-600">
+            <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 mb-6 md:mb-0 md:mr-10">
+                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_300/v1769300394/MARKV_107_u6zbj1.heic" alt="Mark VunCannon" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+            </div>
+            <div class="flex flex-col text-center md:text-left">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-serif font-bold text-gray-900 uppercase leading-none mb-1">MARK VUNCANNON</h3>
+                    <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">Actor</p>
+                </div>
+                <blockquote class="text-lg font-serif italic text-gray-700 leading-relaxed">
+                    "Absolutely Insightful! Michael Petted not only provides a safe, creative environment for you to expand your craft, he is also fully vested in your success! My journey as an artist would not be the same without him."
+                </blockquote>
+                <div class="mt-1 pt-1 border-t border-gray-100">
+                    <p class="text-sm text-gray-500">
+                        <span class="font-semibold text-gray-700">–</span>Criminal Minds, Unusual Suspects, Murder Book, The Night We Called It a Day - Bob Dylan (Music Video)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-6 pb-6 max-w-4xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-amber-600">
+            <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 mb-6 md:mb-0 md:mr-10">
+                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,c_fill,g_face,w_400,h_400/v1769938241/Screenshot_2026-02-01_at_1.30.35_AM_sv0e9o.png" alt="Maha Kolacek" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+            </div>
+            <div class="flex flex-col text-center md:text-left">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-serif font-bold text-gray-900 uppercase leading-none mb-1">MAHA RIZK</h3>
+                    <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">Actress</p>
+                </div>
+                <blockquote class="text-lg font-serif italic text-gray-700 leading-relaxed">
+                    "Michael has an extraordinary ability to see each actor fully — their strengths, their fears, and their potential. He remembers my performances and what I was trying to accomplish, even when I have trouble recalling. His guidance is gentle yet challenging, pushing me to grow in ways I didn't know were possible."
+                </blockquote>
+                <div class="mt-1 pt-1 border-t border-gray-100">
+                    <p class="text-sm text-gray-500">
+                        <span class="font-semibold text-gray-700">–</span>Artie And Alice, Generation Well
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-6 pb-20 max-w-4xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center md:items-start bg-white border border-gray-100 p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-amber-600">
+            <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 mb-6 md:mb-0 md:mr-10">
+                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,c_fill,g_face,w_400,h_400/v1770976412/IMG_9582_zwgngh.jpg" alt="Shayna Dell'Angelo" class="w-full h-full object-cover rounded-xl shadow-md border border-gray-50">
+            </div>
+            <div class="flex flex-col text-center md:text-left">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-serif font-bold text-gray-900 uppercase leading-none mb-1">SHAYNA DELL'ANGELO</h3>
+                    <p class="text-[10px] text-amber-600 font-bold tracking-[0.2em] uppercase">Actress</p>
+                </div>
+                <blockquote class="text-lg font-serif italic text-gray-700 leading-relaxed">
+                    "Ain't nobody like Petted! Highly perceptive and an expert of the craft--he can spot individual strengths and talent. With grace and a sense of humor, he gently guides us on how we can serve each character and add to our tool belt along the way. Michael offers a safe space to play, mess-up, explore, tap-in, and expand in the art of acting."
+                </blockquote>
+                <div class="mt-1 pt-1 border-t border-gray-100">
+                    <p class="text-sm text-gray-500">
+                        <span class="font-semibold text-gray-700">–</span>November First, Bootleg
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-16 lg:py-20 bg-gray-50 border-t border-gray-200 w-full overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6 uppercase tracking-tight">
+                Train with Michael
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 mb-8 md:mb-10 leading-relaxed">
+                Whether you are a seasoned professional or just beginning your journey, join a community dedicated to the ongoing growth of the working actor — where the craft of acting meets the reality of the industry.
+            </p>
+            <div class="flex justify-center">
+                <a href="schedule.html" class="inline-block text-white bg-amber-600 px-6 py-3 md:px-10 md:py-4 rounded-lg hover:bg-amber-700 transition duration-300 font-bold shadow-lg uppercase tracking-widest text-xs md:text-sm">
+                    Enroll Now
+                </a>
             </div>
         </div>
     </section>
 
     <footer class="py-8 bg-gray-100 text-center text-gray-500 text-sm border-t border-gray-200">
-        <p>Michael Petted Acting Studio. Los Angeles, CA. | &copy; 2025</p>
+        <p class="mb-2">Michael Petted Acting Studio. Los Angeles, CA. | &copy; 2026 All Rights Reserved.</p>
+        <p class="text-xs">
+            <a href="terms.html" class="text-amber-600 hover:text-amber-700">Terms of Use</a> | 
+            <a href="privacy.html" class="text-amber-600 hover:text-amber-700">Privacy Policy</a>
+        </p>
     </footer>
 
+    <script src="main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
 </body>
 </html>

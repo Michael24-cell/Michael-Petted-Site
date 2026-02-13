@@ -4,45 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Michael Petted - Biography & Mission</title>
+    <link rel="preload" as="image" href="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_50,w_1400/v1769311860/IMG_5549_hscfui.jpg" fetchpriority="high">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .font-serif { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
+        .font-serif { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
         .font-sans { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
     </style>
 </head>
-<body class="bg-white text-gray-800 font-sans antialiased">
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden w-full max-w-[100vw]">
 
-    <header class="sticky top-0 left-0 right-0 z-50 p-6 bg-white shadow-md">
-        <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <a href="index.html" class="text-2xl font-serif tracking-wide text-gray-900 transition duration-300">MICHAEL PETTED</a>
+    <header class="sticky top-0 left-0 right-0 z-50 bg-white shadow-md w-full overflow-x-hidden">
+        <div class="h-16 md:h-auto md:p-6 flex items-center">
+        <nav class="grid grid-cols-[auto_1fr_auto] md:flex md:justify-between items-center max-w-7xl mx-auto w-full px-2 gap-2">
+            <!-- Mobile: Hamburger Menu Button (Far Left) -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1.5 p-2 focus:outline-none z-50 flex-shrink-0 h-8 justify-center">
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+            </button>
+            
+            <!-- Logo (Centered on mobile, left on desktop) -->
+            <a href="index.html" class="text-sm md:text-2xl font-serif tracking-tight md:tracking-wide text-gray-900 flex-shrink-0 text-center md:text-left whitespace-nowrap justify-self-center">MICHAEL PETTED ACTING STUDIO</a>
+            
+            <!-- Desktop Navigation -->
             <div class="space-x-8 hidden md:flex font-medium text-gray-600">
                 <a href="index.html" class="hover:text-amber-600">Home</a>
-                <a href="schedule.html" class="hover:text-amber-600">Schedule & Rates</a>
+                <a href="schedule.html" class="hover:text-amber-600">Schedule & Enroll</a>
                 <a href="testimonials.html" class="hover:text-amber-600">Testimonials</a>
                 <a href="about.html" class="text-amber-600 border-b-2 border-amber-600">About Michael</a>
             </div>
-            <a href="schedule.html" class="text-white bg-amber-600 px-5 py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-md">
-                Register Now
+            
+            <!-- Enroll Button (Right side) -->
+            <a href="schedule.html" class="text-white bg-amber-600 px-2 py-2 md:px-5 md:py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-sm text-xs md:text-base whitespace-nowrap flex-shrink-0 h-8 flex items-center justify-center justify-self-end">
+                Enroll
             </a>
         </nav>
+        </div>
+        
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden mx-2 mb-4 bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+            <div class="flex flex-col space-y-0">
+                <a href="index.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Home</a>
+                <a href="schedule.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Schedule & Enroll</a>
+                <a href="testimonials.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Testimonials</a>
+                <a href="about.html" class="px-6 py-3 text-amber-600 bg-amber-50 border-b border-amber-200 font-semibold">About Michael</a>
+            </div>
+        </div>
     </header>
 
-    <section class="py-24 md:py-32 text-center bg-gray-50 border-b border-gray-200">
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-5xl md:text-6xl font-serif font-extrabold text-gray-900">
-                Michael Petted: Artist and Educator
-            </h1>
-            <p class="mt-4 text-xl md:text-2xl text-amber-600 font-semibold italic">
-            </p>
+    <section class="relative w-full h-[40vh] md:h-[50vh] overflow-hidden">
+        <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_50,w_1400/v1769311860/IMG_5549_hscfui.jpg" 
+             alt="Michael Petted" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center px-4 md:px-6 max-w-5xl w-full">
+                <h1 class="text-3xl md:text-5xl lg:text-7xl font-serif font-extrabold text-white mb-6" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">
+                    Michael Petted: Artist and Educator
+                </h1>
+                <p class="text-xl md:text-2xl lg:text-3xl text-amber-400 font-semibold italic" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6);">
+                </p>
+            </div>
         </div>
     </section>
 
-    <section class="py-20 max-w-7xl mx-auto px-6">
+    <section class="w-full py-12 md:py-16 lg:py-20 max-w-7xl mx-auto px-4 md:px-6">
         <div class="flex flex-col lg:flex-row gap-16">
             
-            <div class="lg:w-1/3 w-full">
+            <div class="lg:w-1/3 w-full hidden lg:block">
                 <div class="sticky top-32">
-                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto,w_800/v1764986689/MPet_Headshot_Tanner_8_rhu70x.jpg" 
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_50,w_800/v1764986689/MPet_Headshot_Tanner_8_rhu70x.jpg" 
                          alt="Michael Petted Portrait" 
                          class="w-full h-auto object-cover rounded-2xl shadow-2xl border-b-8 border-amber-600 mb-8">
                     
@@ -55,6 +86,12 @@
                             <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> American Horror Story</li>
                             <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> A Big Bold Beautiful Journey</li>
                             <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Far and Away (Australia)</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> 911</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> How I Met Your Father</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Little Voice</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> The Offer</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> We Are Who We Are</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Forever [Lifetime Movie]</li>
                         </ul>
                     </div>
                 </div>
@@ -63,62 +100,119 @@
             <div class="lg:w-2/3 space-y-12">
                 
                 <div>
-                    <h2 class="text-4xl font-serif font-bold text-gray-900 mb-6 border-b pb-4 uppercase tracking-wide">The Educator</h2>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6 border-b pb-4 uppercase tracking-tight md:tracking-wide">The Artist Behind the Teacher</h2>
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769297631/IMG_5546_iv2shw.jpg" 
+                         alt="Actors in class during scene study" 
+                         class="md:hidden w-full h-64 object-cover rounded-xl shadow-lg mb-6">
                     <div class="prose prose-lg text-gray-600 max-w-none space-y-6">
-                        <p>Michael Petted has been a dedicated acting teacher since <strong>2009</strong>, when he began teaching full-time at the renowned <strong>Beverly Hills Playhouse</strong>, where he spent ten years shaping the craft of hundreds of actors - ultimately teaching thousands through his classes, workshops, and international programs.</p>
-                        
-                        <p>The Playhouse is known for its celebrated alumni, including <strong>George Clooney, Michelle Pfeiffer, Alec Baldwin, Jorge Garcia,</strong> and <strong>Monica Barbaro</strong>, among many others.</p>
-                        
-                        <p>For eight years, Michael also served as the Head Acting Instructor for the <strong>Hollywood Immersive</strong> program, working with actors from around the world—including Australia, England, and Africa—helping them bridge the gap between training and professional work.</p>
+                        <p>Michael Petted is an award-winning actor, director, writer, producer, musician, songwriter, and renowned acting teacher. His on-screen credits include FX's Emmy Award-winning <strong>American Horror Story</strong> (opposite <strong>Jessica Lange</strong>), FOX's <strong>New Girl</strong>, the indie feature <strong>Mayor Cupcake</strong> (with <strong>Lea Thompson</strong>, <strong>Judd Nelson</strong>, and <strong>Zoey Deutch</strong>), and the independent films <strong>Spade</strong> (opposite <strong>Jorge Garcia</strong>) and <strong>A Good Thing</strong> (with <strong>Tom Bower</strong> and <strong>Anne Gee Byrd</strong>). He also recurred on NBC's <strong>The Late Late Show</strong> alongside <strong>Thomas Lennon</strong> and has appeared in numerous award-winning independent films — most recently <strong>Beautiful Dead Things</strong>, which screened at over 20 international film festivals and is now streaming on Amazon Prime. Michael's most recent directorial project, the short film <strong>Artie and Alice</strong>, has screened at film festivals worldwide to great acclaim. Michael has had the honor of working under the direction of <strong>George Clooney</strong>, <strong>Gene Reynolds</strong>, and <strong>Howard Deutch</strong>, among others.</p>
 
-                        <p>Today, Michael teaches his own scene study and on-camera acting class at <strong>The Hudson Theatre in Los Angeles</strong>, where his passion for truth, artistry, and practical technique continues to inspire actors at every level - from complete beginners to seasoned professionals.</p>
-                        
-                        <div class="bg-amber-50 p-8 rounded-xl border-l-4 border-amber-600 italic">
-                            <p class="text-xl font-semibold text-amber-900 mb-0">
-                                Michael believes great acting comes from living truthfully, creating fearlessly, and turning craft into art one scene at a time. His classes focus on <strong>moment-to-moment work</strong>, using imagination and lived experience to create authentic, exciting performances - while also emphasizing the realities of a working career.
-                            </p>
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769650642/Screenshot_2026-01-25_at_5.47.19_PM_mqct2f.png" 
+                                 alt="Michael Petted performance" 
+                                 class="w-full h-auto object-cover rounded-xl shadow-lg">
+                            <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769650643/Screenshot_2026-01-25_at_5.48.27_PM_gzalak.png" 
+                                 alt="Lone Star production with Don Swayze" 
+                                 class="w-full h-auto object-cover rounded-xl shadow-lg">
                         </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 py-6">
+                            <div class="border border-gray-100 p-10 rounded-xl shadow-sm bg-white">
+                                <h4 class="text-amber-600 font-bold uppercase tracking-widest text-base mb-4">On Stage</h4>
+                                <p class="text-base leading-relaxed">Stage productions include <strong>Eric Bogosian's</strong> <strong>Suburbia</strong> at The Skylight Theatre Company, <strong>Sam Shepard's</strong> <strong>True West</strong>, <strong>John Patrick Shanley's</strong> <strong>Italian American Reconciliation</strong>, and <strong>Robert Bolt's</strong> <strong>A Man for All Seasons</strong> alongside <strong>John Glover</strong>, directed by <strong>Howard Deutch</strong>.</p>
+                            </div>
+                            <div class="border border-gray-100 p-10 rounded-xl shadow-sm bg-white">
+                                <h4 class="text-amber-600 font-bold uppercase tracking-widest text-base mb-4">Accolades</h4>
+                                <p class="text-base leading-relaxed">Earned a <strong>Los Angeles Ovation Award nomination for Best Actor</strong> for his role in <strong>Lone Star</strong> (opposite <strong>Don Swayze</strong> and produced by <strong>Patrick Swayze</strong> and <strong>Doris Roberts</strong>) and starred in the <strong>Ovation</strong>-nominated <strong>A Gift from Heaven</strong> alongside <strong>Beth Grant</strong> and <strong>Tara Buck</strong>.</p>
+                            </div>
+                        </div>
+
+                        <p>A passionate musician and professional percussionist, Michael has performed with legendary artists such as <strong>Slash</strong> (Guns N' Roses) and <strong>Bob Dylan</strong>, among many others. As a singer-songwriter, he continues to write, record, and perform original music available on all major streaming platforms.</p>
                     </div>
                 </div>
 
                 <div class="pt-8">
-                    <h2 class="text-4xl font-serif font-bold text-gray-900 mb-6 border-b pb-4 uppercase tracking-wide">The Artist Behind the Teacher</h2>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6 border-b pb-4 uppercase tracking-tight md:tracking-wide">The Educator</h2>
                     <div class="prose prose-lg text-gray-600 max-w-none space-y-6">
-                        <p>As an actor, Michael's work spans television, film, and stage. His screen credits include FX's <strong>American Horror Story</strong> (opposite Jessica Lange), FOX's <strong>New Girl</strong>, and the indie feature <strong>Mayor Cupcake</strong>, alongside Lea Thompson, Judd Nelson, and Zoey Deutch. He also starred in <strong>Spade</strong> (opposite Jorge Garcia) and <strong>A Good Thing</strong> (with Tom Bower and Anne Gee Byrd).</p>
+                        <p><strong>Michael Petted</strong> is one of Los Angeles' most dynamic and sought-after acting teachers. With over <strong>15 years of experience</strong>, he has trained actors to break through creatively and professionally — helping them book roles, deepen their craft, and build lasting careers.</p>
                         
-                        <p>He appeared in recurring sketches on NBC's <strong>The Late Late Show</strong> alongside Thomas Lennon, and most recently in the award-winning short <strong>Beautiful Dead Things</strong>, featured in over twenty festivals worldwide and now streaming on Amazon Prime.</p>
+                        <p>Michael has been a dedicated acting teacher since <strong>2009</strong>, when he began teaching full-time at the renowned <strong>Beverly Hills Playhouse</strong>. There, he spent over a decade teaching and shaping the craft of hundreds of actors — working with many from the moment they began their training through to advanced levels of work. Rooted in the lineage of <strong>Milton Katselas</strong>, he taught actors through the foundational stages of discovery into deeper, more professional levels of training. This long-term developmental approach continues to inform his teaching today.</p>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-6">
-                            <div class="border border-gray-100 p-6 rounded-xl shadow-sm bg-white">
-                                <h4 class="text-amber-600 font-bold uppercase tracking-widest text-xs mb-3">On Stage</h4>
-                                <p class="text-sm leading-relaxed">Stage productions include Eric Bogosian's <strong>Suburbia</strong> at The Skylight Theatre Company, Sam Shepard's <strong>True West</strong>, John Patrick Shanley's <strong>Italian American Reconciliation</strong>, and Robert Bolt's <strong>A Man for All Seasons</strong> alongside John Glover, directed by Howard Deutch.</p>
-                            </div>
-                            <div class="border border-gray-100 p-6 rounded-xl shadow-sm bg-white">
-                                <h4 class="text-amber-600 font-bold uppercase tracking-widest text-xs mb-3">Accolades</h4>
-                                <p class="text-sm leading-relaxed">Earned a <strong>Los Angeles Ovation Award nomination for Best Actor</strong> for his role in <strong>Lone Star</strong> (opposite Don Swayze and produced by Patrick Swayze and Doris Roberts) and starred in the <strong>Ovation</strong>-nominated <strong>A Gift from Heaven</strong> alongside Beth Grant and Tara Buck.</p>
-                            </div>
+                        <p>The Playhouse is known for its celebrated alumni, including <strong>George Clooney</strong>, <strong>Michelle Pfeiffer</strong>, <strong>Alec Baldwin</strong>, <strong>Jorge Garcia</strong>, and <strong>Monica Barbaro</strong>, among many others.</p>
+                        
+                        <p>For eight years, Michael also served as the <strong>Head Acting Instructor</strong> for the <strong>Hollywood Immersive</strong> program, working with actors from around the world — including Australia, England, and Africa — teaching scene study and performance technique, challenging actors to achieve breakthroughs in their work while preparing them for the demands and realities of professional-level acting.</p>
+
+                        <p>Today, Michael teaches his own <strong>scene study and on-camera acting classes</strong> at <strong>The Hudson Theatre in Los Angeles</strong>, where his passion for growth, artistry, and practical technique continues to inspire actors at every level — from complete beginners to seasoned professionals.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-32">
+                            <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769297692/IMG_3334_hetmc8.jpg" 
+                                 alt="Actors working on a scene in class with Michael Petted" 
+                                 class="w-full h-auto object-cover rounded-xl shadow-lg">
+                            <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769313045/IMG_9380_u5b5ra.jpg" 
+                                 alt="Actors performing in class" 
+                                 class="w-full h-full object-cover rounded-xl shadow-lg">
                         </div>
 
-                        <p>Michael has been directed by <strong>George Clooney, Gene Reynolds,</strong> and <strong>Howard Deutch</strong>, among many others. He is also an accomplished musician and songwriter, having performed with icons such as <strong>Slash</strong> and <strong>Bob Dylan</strong>, and continues to write, record, and perform his own music.</p>
+                        <div class="bg-amber-50 p-8 rounded-xl border-l-4 border-amber-600 italic">
+                            <p class="text-xl font-semibold text-amber-900 mb-0">
+                                "I train actors to explore freely, discover their unique voice, make the work personal through behavior, and listen to their impulses."
+                            </p>
+                        </div>
+
+                        <!-- Student Success Highlights - Mobile Only -->
+                        <div class="lg:hidden bg-gray-900 p-8 rounded-2xl text-white shadow-xl mt-8">
+                            <h3 class="text-amber-400 font-bold uppercase tracking-widest text-xs mb-6">Student Success Highlights</h3>
+                            <ul class="space-y-4 text-sm font-medium">
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Yellowstone</li>
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> The Promised Land (Series Lead)</li>
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> And Just Like That</li>
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> American Horror Story</li>
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> A Big Bold Beautiful Journey</li>
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Far and Away (Australia)</li>
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> 911</li>
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> How I Met Your Father</li>
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Little Voice</li>
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> The Offer</li>
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> We Are Who We Are</li>
+                                <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Forever [Lifetime Movie]</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
-    <section class="py-20 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 uppercase tracking-tight">
+
+    <section class="py-16 bg-white hidden md:block">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769297631/IMG_5546_iv2shw.jpg" 
+                     alt="Actors in class during scene study" 
+                     class="w-full h-auto object-cover rounded-xl shadow-lg">
+                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769297644/SURVIVECOVER_puprsd.jpg" 
+                     alt="Michael Petted" 
+                     class="w-full h-auto object-cover rounded-xl shadow-lg">
+                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769650632/Screenshot_2026-01-25_at_5.42.28_PM_igwk20.png" 
+                     alt="Michael Petted" 
+                     class="w-full h-auto object-cover rounded-xl shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-16 lg:py-20 bg-gray-50 border-t border-gray-200 w-full overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6 uppercase tracking-tight">
                 Train with Michael
             </h2>
-            <p class="text-lg text-gray-600 mb-10 leading-relaxed">
-                Whether you are a seasoned professional or just beginning your journey, Michael’s studio offers a safe space for dangerous work. Join a community dedicated to truth, imagination, and the reality of the working actor.
+            <p class="text-base md:text-lg text-gray-600 mb-8 md:mb-10 leading-relaxed">
+                Whether you are a seasoned professional or just beginning your journey, join a community dedicated to the ongoing growth of the working actor — where the craft of acting meets the reality of the industry.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="schedule.html" class="inline-block text-white bg-amber-600 px-10 py-4 rounded-lg hover:bg-amber-700 transition duration-300 font-bold shadow-lg uppercase tracking-widest text-sm">
-                    View Class Schedule
+                <a href="schedule.html" class="inline-block text-white bg-amber-600 px-6 py-3 md:px-10 md:py-4 rounded-lg hover:bg-amber-700 transition duration-300 font-bold shadow-lg uppercase tracking-widest text-xs md:text-sm">
+                    Enroll Now
                 </a>
-                <a href="testimonials.html" class="inline-block text-amber-700 border-2 border-amber-600 px-10 py-4 rounded-lg hover:bg-amber-50 transition duration-300 font-bold uppercase tracking-widest text-sm">
+                <a href="testimonials.html" class="inline-block text-amber-700 border-2 border-amber-600 px-6 py-3 md:px-10 md:py-4 rounded-lg hover:bg-amber-50 transition duration-300 font-bold uppercase tracking-widest text-xs md:text-sm">
                     Read Testimonials
                 </a>
             </div>
@@ -126,8 +220,32 @@
     </section>
 
     <footer class="py-8 bg-gray-100 text-center text-gray-500 text-sm border-t border-gray-200">
-        <p>Michael Petted Acting Studio. Los Angeles, CA. | &copy; 2025</p>
+        <p class="mb-2">Michael Petted Acting Studio. Los Angeles, CA. | &copy; 2026 All Rights Reserved.</p>
+        <p class="text-xs">
+            <a href="terms.html" class="text-amber-600 hover:text-amber-700">Terms of Use</a> | 
+            <a href="privacy.html" class="text-amber-600 hover:text-amber-700">Privacy Policy</a>
+        </p>
     </footer>
 
+    <script src="main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
 </body>
 </html>

@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Michael Petted Acting Classes: Live Truthfully, Create Fearlessly in Los Angeles</title>
+    <link rel="preload" as="image" href="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_50,w_1400/v1764923144/IMG_8022_wfammf.jpg" fetchpriority="high">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .font-serif { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
+        .font-serif { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
         .font-sans { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
         
         /* New Sticker Styling */
@@ -19,7 +20,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 2rem;
+            padding: 3rem;
             border: 3px solid #d97706; /* Amber-600 */
             background-color: rgba(0, 0, 0, 0.2); 
             backdrop-filter: blur(8px);
@@ -32,203 +33,233 @@
         }
     </style>
 </head>
-<body class="bg-white text-gray-800 font-sans antialiased">
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden w-full max-w-full">
 
-    <header class="sticky top-0 left-0 right-0 z-50 p-6 bg-white shadow-md">
-        <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <div class="text-2xl font-serif tracking-wide text-gray-900">MICHAEL PETTED ACTING STUDIOS</div>
+    <header class="sticky top-0 left-0 right-0 z-50 bg-white shadow-md w-full overflow-x-hidden">
+        <div class="h-16 md:h-auto md:p-6 flex items-center">
+        <nav class="grid grid-cols-[auto_1fr_auto] md:flex md:justify-between items-center max-w-7xl mx-auto w-full px-2 gap-2">
+            <!-- Mobile: Hamburger Menu Button (Far Left) -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col space-y-1.5 p-2 focus:outline-none z-50 flex-shrink-0 h-8 justify-center">
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+            </button>
+            
+            <!-- Logo (Centered on mobile, left on desktop) -->
+            <a href="index.html" class="text-sm md:text-2xl font-serif tracking-tight md:tracking-wide text-gray-900 flex-shrink-0 text-center md:text-left whitespace-nowrap justify-self-center">MICHAEL PETTED ACTING STUDIO</a>
+            
+            <!-- Desktop Navigation -->
             <div class="space-x-8 hidden md:flex font-medium text-gray-600">
                 <a href="index.html" class="text-amber-600 border-b-2 border-amber-600">Home</a>
-                <a href="schedule.html" class="hover:text-amber-600">Schedule & Rates</a>
+                <a href="schedule.html" class="hover:text-amber-600">Schedule & Enroll</a>
                 <a href="testimonials.html" class="hover:text-amber-600">Testimonials</a>
                 <a href="about.html" class="hover:text-amber-600">About Michael</a>
             </div>
-            <a href="schedule.html" class="text-white bg-amber-600 px-5 py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-md">
-                Register Now
+            
+            <!-- Enroll Button (Right side) -->
+            <a href="schedule.html" class="text-white bg-amber-600 px-2 py-2 md:px-5 md:py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-sm text-xs md:text-base whitespace-nowrap flex-shrink-0 h-8 flex items-center justify-center justify-self-end">
+                Enroll
             </a>
         </nav>
-    </header>
-
-    <section class="min-h-screen flex items-center justify-center text-center bg-cover bg-center relative" 
-        style="background-image: url('https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_auto,w_1920/v1764923144/IMG_8022_wfammf.jpg');">
-        <div class="absolute inset-0 bg-gray-900/50"></div> 
-        <div class="relative z-10 p-12 md:p-20">
-            <h1 class="text-6xl md:text-7xl font-serif font-extrabold leading-tight tracking-tight text-white">
-                LIVE TRUTHFULLY.
-            </h1>
-            <h1 class="text-6xl md:text-7xl font-serif font-extrabold leading-tight tracking-tight text-amber-400">
-                CREATE FEARLESSLY.
-            </h1>
-            <p class="mt-8 text-xl md:text-2xl max-w-3xl mx-auto text-gray-200">
-                "I teach actors to live truthfully, create fearlessly, and turn craft into art one scene at a time."
-            </p>
-            <a href="#the-teacher" class="mt-10 inline-block text-lg text-white border-2 border-amber-400 bg-amber-600/10 backdrop-blur-sm px-8 py-3 rounded-full hover:bg-amber-700 hover:text-white transition duration-300 font-medium">
-                Explore The Studio
-            </a>
-            
         </div>
         
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden mx-2 mb-4 bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+            <div class="flex flex-col space-y-0">
+                <a href="index.html" class="px-6 py-3 text-amber-600 bg-amber-50 border-b border-amber-200 font-semibold">Home</a>
+                <a href="schedule.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Schedule & Enroll</a>
+                <a href="testimonials.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Testimonials</a>
+                <a href="about.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition">About Michael</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="min-h-[85vh] md:min-h-screen flex flex-col md:flex md:items-center md:justify-center text-center bg-cover bg-center relative w-full overflow-hidden pt-32 md:pt-0" 
+        style="background-image: url('https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_50,w_1400/v1764923144/IMG_8022_wfammf.jpg');">
+        <div class="absolute inset-0 bg-gray-900/50"></div> 
+        <div class="relative z-10 p-6 md:p-12 lg:p-20 w-full max-w-full md:flex md:items-center md:justify-center">
+            <div class="md:text-center w-full">
+                <h1 class="hero-title text-4xl md:text-6xl lg:text-7xl font-serif font-extrabold leading-tight tracking-tight text-white px-4">
+                    LIVE TRUTHFULLY.
+                </h1>
+                <h1 class="hero-title text-4xl md:text-6xl lg:text-7xl font-serif font-extrabold leading-tight tracking-tight text-amber-400 px-4">
+                    CREATE FEARLESSLY.
+                </h1>
+                <p class="mt-6 md:mt-8 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto text-gray-200 px-4">
+                    I teach actors to live truthfully, create fearlessly, and find their unique voice as artists.
+                </p>
+                <a href="#the-class" class="mt-8 md:mt-10 inline-block text-white border-2 border-amber-400 bg-amber-600/10 backdrop-blur-sm px-6 py-3 md:px-8 md:py-3 rounded-full hover:bg-amber-700 hover:text-white transition duration-300 font-semibold text-sm md:text-base">
+                    Explore The Studio
+                </a>
+                
+                <!-- Mobile Beth Grant Testimonial -->
+                <a href="testimonials.html" class="block md:hidden mt-8 ml-6">
+                    <div class="testimonial-sticker" style="width: 200px; height: 200px; padding: 2rem;">
+                        <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto,w_100/v1767133549/Screenshot_2025-12-30_at_2.25.42_PM_gkeeyy.jpg" alt="Beth Grant" class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-amber-500">
+                        <p class="font-bold text-xs text-white uppercase tracking-widest">Beth Grant</p>
+                        <p class="text-sm text-white italic mt-1 leading-snug font-serif px-1">"Michael is seriously one of the best actors I've ever worked with in my life..."</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Desktop Beth Grant Testimonial -->
         <a href="testimonials.html" class="absolute bottom-10 left-5 z-20 hidden md:block">
             <div class="testimonial-sticker">
-                <img loading="lazy" src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto,w_100/v1767133549/Screenshot_2025-12-30_at_2.25.42_PM_gkeeyy.jpg" alt="Beth Grant" class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-amber-500">
-                <p class="font-bold text-sm text-white uppercase tracking-widest">Beth Grant</p>
-                <p class="text-lg text-white italic mt-2 leading-tight font-serif px-2">"Michael is seriously one of the best actors I've ever worked with in my life..."</p>
+                <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto,w_100/v1767133549/Screenshot_2025-12-30_at_2.25.42_PM_gkeeyy.jpg" alt="Beth Grant" class="w-20 h-20 rounded-full object-cover mb-3 border-2 border-amber-500">
+                <p class="font-bold text-xs text-white uppercase tracking-widest">Beth Grant</p>
+                <p class="text-base text-white italic mt-1 leading-snug font-serif px-1">"Michael is seriously one of the best actors I've ever worked with in my life..."</p>
             </div>
         </a>
-    </section>                </div>
-              </a>                </div>
-              </a>                </div>
-              </a>
-            </div>
-          </a>
-        </div>
     </section>
 
-    <section id="the-teacher" class="py-24 md:py-32 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900">
+<section id="the-class" class="w-full py-16 md:py-24 lg:py-32 max-w-7xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-900 uppercase px-4">THE CLASS</h2>
+            <h3 class="text-lg md:text-xl italic text-gray-500 mt-2 px-4">Scene Study & On-Camera Training</h3>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+            <div class="p-10 border border-gray-200 rounded-2xl shadow bg-white lg:sticky lg:top-32 flex flex-col">
+                <div>
+                    <h3 class="text-3xl font-bold text-amber-600 mb-6">Technique</h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">Michael's class is based on <strong>moment-to-moment</strong> work — a real person in a real place — grounded in a <strong>behavior-oriented</strong> approach that uses imagination and lived experience to create authentic, compelling performances.</p>
+                    <p class="text-lg text-gray-600 leading-relaxed">The training also emphasizes the <strong>realities of a working career</strong>, ensuring actors bridge the gap between training and professional work.</p>
+                </div>
+                <div class="mt-auto pt-6 border-t border-gray-100 italic text-gray-500 font-serif">
+                    "Train with truth. Create with courage."
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="p-10 border border-gray-200 rounded-2xl shadow bg-white">
+                    <h3 class="text-3xl font-bold text-amber-600 mb-6">Primary Focus</h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">The class primarily focuses on <strong>scene study</strong>, with students presenting fully rehearsed scenes that have been prepared outside of class with a partner.</p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">Michael's class is a supportive, mixed-level environment where beginners, advanced actors, and working professionals can all thrive.</p>
+                    <p class="text-lg text-gray-600 leading-relaxed">We also act on camera, do monologues and cold readings.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4 uppercase tracking-wide">
+                        Your Impulse is Gold
+                    </h4>
+                    <p class="text-gray-700 leading-relaxed">What is your voice as an actor? No one else is just like you. No one else has what you have. <strong>Learn to develop and trust your instincts and impulses.</strong> Be bold. Find your uniqueness. That is your gold — mine it.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4 uppercase tracking-wide">
+                        Industry Reality
+                    </h4>
+                     <ul class="space-y-3 text-gray-700 leading-relaxed ml-5 list-disc marker:text-amber-600">
+                        <li>A professional class for students who desire to grow and get work.</li>
+                        <li><strong>Know your casting.</strong> What parts should you be going after? Don't waste time.</li>
+                        <li>What is your "invitation to the party"?</li>
+                    </ul>
+                </div>
+                
+                <div class="pt-6 border-t border-gray-100">
+                    <p class="text-3xl font-serif italic text-amber-600 font-bold">Be Present. Explore. Play.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div class="rounded-xl shadow border-2 border-amber-100 overflow-hidden h-64 md:h-80">
+                 <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1770089255/IMG_9478_oh06qp.jpg" 
+                      alt="Actors performing a scene in class" 
+                      class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="rounded-xl shadow border-2 border-amber-100 overflow-hidden h-64 md:h-80">
+                 <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769297238/IMG_1952_l6fmje.heic" 
+                      alt="Michael Petted coaching actors during a scene study class" 
+                      class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+            <div class="rounded-xl shadow border-2 border-amber-100 overflow-hidden h-64 md:h-80">
+                 <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1764923168/IMG_8355_vzhn9b.jpg" 
+                      alt="Actor performing an emotional moment in class" 
+                      class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            </div>
+        </div>
+
+        <div class="p-6 md:p-8 rounded-2xl shadow-lg bg-gray-900 max-w-4xl mx-auto w-full">
+            <h3 class="text-amber-400 font-bold uppercase tracking-widest text-sm md:text-base mb-6 text-center">Student Success Highlights</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-6">
+                <ul class="space-y-3 text-sm font-medium text-white">
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Ladies in Black</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> The Promised Land (Series Lead)</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> And Just Like That</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> A Big Bold Beautiful Journey</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Grease</li>
+                </ul>
+                <ul class="space-y-3 text-sm font-medium text-white">
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Yellowstone</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> American Horror Story</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Far and Away (Australia)</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Little Voice</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> High Stakes Holiday</li>
+                </ul>
+                <ul class="space-y-3 text-sm font-medium text-white">
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> We Are Who We Are</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> How I Met Your Father</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> Forever [Lifetime Movie]</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> 911</li>
+                    <li class="flex items-start"><span class="text-amber-500 mr-2">/</span> The Offer</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-16 md:mt-20 px-4">
+            <a href="schedule.html" class="inline-block text-white bg-amber-600 text-xs md:text-sm px-6 py-3 md:px-10 md:py-4 font-semibold rounded-lg hover:bg-amber-700 transition duration-300 shadow-lg uppercase tracking-widest">
+                Schedule & Enroll
+            </a>
+        </div>
+    </section>    <div class="w-full max-w-7xl mx-auto border-t border-gray-100 px-4"></div>
+
+    <section id="the-philosophy" class="w-full py-16 md:py-24 lg:py-32 bg-gray-50 max-w-full text-center px-4 md:px-6 overflow-hidden">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif mb-8 md:mb-12 font-bold text-amber-600 px-4">
+            A safe space for dangerous work.
+        </h2>
+        <blockquote class="text-xl md:text-2xl lg:text-3xl italic text-gray-700 leading-relaxed max-w-3xl mx-auto px-4">
+            "You'll be challenged but always feel safe to take risks, explore deeply, and grow through the work."
+        </blockquote>
+    </section>
+    <div class="w-full max-w-7xl mx-auto border-t border-gray-100 px-4"></div>
+
+    <section id="the-teacher" class="w-full py-16 md:py-24 lg:py-32 max-w-7xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-900 px-4">
                 THE TEACHER
             </h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div class="w-full max-w-sm mx-auto rounded-xl shadow-lg border-4 border-amber-100 overflow-hidden">
-                 <img loading="lazy" src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_auto,w_600/v1764935295/IMG_8736_dl5jhq.jpg" 
+                 <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1764935295/IMG_8736_dl5jhq.jpg" 
                       alt="Michael Petted - The Teacher" 
                       class="w-full h-auto object-cover">
             </div>
 
             <div class="space-y-6 text-lg text-gray-600">
-                <p>Michael Petted has been a dedicated acting teacher since <strong>2009</strong>, when he began teaching full-time at the renowned <strong>Beverly Hills Playhouse</strong>, where he spent ten years shaping the craft of hundreds of actors.</p>
-                <p>For eight years, Michael also served as the Head Acting Instructor for the <strong>Hollywood Immersive</strong> program, working with actors from around the world including Australia, England, and Africa, helping them bridge the gap between training and professional work.</p>
+                <p><strong>Michael Petted</strong> is one of Los Angeles' most dynamic and sought-after acting teachers. With over <strong>15 years of experience</strong>, he has trained actors to break through creatively and professionally — helping them book roles, deepen their craft, and build lasting careers.</p>
+                <p>Michael has been a dedicated acting teacher since <strong>2009</strong>, when he began teaching full-time at the renowned <strong>Beverly Hills Playhouse</strong>. There, he spent over a decade teaching and shaping the craft of hundreds of actors — working with many from the moment they began their training through to advanced levels of work. Rooted in the lineage of <strong>Milton Katselas</strong>, he taught actors through the foundational stages of discovery into deeper, more professional levels of training. This long-term developmental approach continues to inform his teaching today.</p>
+                <p>For eight years, Michael also served as the <strong>Head Acting Instructor</strong> for the <strong>Hollywood Immersive</strong> program, working with actors from around the world — including Australia, England, and Africa — teaching scene study and performance technique, challenging actors to achieve breakthroughs in their work while preparing them for the demands and realities of professional-level acting.</p>
                 <blockquote class="border-l-4 border-amber-600 pl-4 italic text-xl text-gray-700 font-medium">
-                    "Today, Michael teaches his own scene study and on-camera acting class at <strong>The Hudson Theatre in Los Angeles</strong>, where his passion for truth, artistry, and practical technique continues to inspire actors at every level—from complete beginners to seasoned professionals."
+                    Today, Michael teaches his own class at <strong>The Hudson Theatre in Los Angeles</strong>, where his passion for growth, artistry, and practical technique continues to inspire actors at every level—from complete beginners to seasoned professionals.
                 </blockquote>
                 <p class="mt-4 text-sm text-gray-500">
                     The Playhouse is known for its celebrated alumni, including <strong>George Clooney</strong>, <strong>Michelle Pfeiffer</strong>, <strong>Alec Baldwin</strong>, <strong>Jorge Garcia</strong>, and <strong>Monica Barbaro</strong>.
                 </p>
             </div>
         </div>
-    </section>
-    <div class="max-w-7xl mx-auto border-t border-gray-100"></div>
-
-    <section id="the-philosophy" class="py-24 md:py-32 bg-gray-50 max-w-full text-center px-6">
-        <h2 class="text-4xl md:text-5xl font-serif mb-12 font-bold text-amber-600">
-            A safe space for dangerous work.
-        </h2>
-        <blockquote class="text-2xl md:text-3xl italic text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            "You'll be challenged but always feel safe to take risks, explore deeply, and grow through the work."
-        </blockquote>
-    </section>
-    <div class="max-w-7xl mx-auto border-t border-gray-100"></div>
-
-<section id="the-class" class="py-24 md:py-32 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 uppercase">THE CLASS</h2>
-            <h3 class="text-xl italic text-gray-500 mt-2">Scene Study & On-Camera Training</h3>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
-            <div class="p-10 border border-gray-200 rounded-2xl shadow-xl bg-white lg:sticky lg:top-32">
-                <h3 class="text-3xl font-bold text-amber-600 mb-6">Focus & Technique</h3>
-                <p class="text-lg text-gray-600 mb-6 leading-relaxed">Michael's class is based on <strong>moment-to-moment work</strong>, using imagination and lived experience to create authentic, exciting performances.</p>
-                <p class="text-lg text-gray-600 leading-relaxed">The training also emphasizes the <strong>realities of a working career</strong>, ensuring actors bridge the gap between training and professional work.</p>
-                <div class="mt-8 pt-8 border-t border-gray-100 italic text-gray-500 font-serif">
-                    "Train with truth. Create with courage."
-                </div>
-            </div>
-
-            <div class="space-y-8">
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 uppercase tracking-wide flex items-center">
-                        <span class="w-2 h-2 bg-amber-600 rounded-full mr-3"></span>The Foundation
-                    </h4>
-                    <ul class="space-y-3 text-gray-700 leading-relaxed ml-5 list-disc marker:text-amber-600">
-                        <li>Based on moment-to-moment work: A real person in a real place.</li>
-                        <li>Using imagination and real-life experiences to fulfill the storytelling.</li>
-                        <li>Have fun and be playful.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 uppercase tracking-wide flex items-center">
-                        <span class="w-2 h-2 bg-amber-600 rounded-full mr-3"></span>Individual Approach
-                    </h4>
-                    <ul class="space-y-3 text-gray-700 leading-relaxed ml-5 list-disc marker:text-amber-600">
-                        <li>Individual approach to each student.</li>
-                        <li>If something already works for you, great—keep doing it.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 uppercase tracking-wide flex items-center">
-                        <span class="w-2 h-2 bg-amber-600 rounded-full mr-3"></span>Your Impulse is Gold
-                    </h4>
-                    <ul class="space-y-3 text-gray-700 leading-relaxed ml-5 list-disc marker:text-amber-600">
-                        <li>As storytellers, ask: How do I want to tell this story? What are my impulses?</li>
-                        <li>Your uniqueness is your gold. Mine it.</li>
-                        <li>Learn to listen to your impulses and act on them. The goal is growth.</li>
-                    </ul>
-                </div>
-
-                 <div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 uppercase tracking-wide flex items-center">
-                        <span class="w-2 h-2 bg-amber-600 rounded-full mr-3"></span>Preparation & Potency
-                    </h4>
-                    <ul class="space-y-3 text-gray-700 leading-relaxed ml-5 list-disc marker:text-amber-600">
-                        <li>Find out what story is being told first, then bring your ideas.</li>
-                        <li class="font-medium text-amber-700 italic">Create moments for yourself. Get personal with your work.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 uppercase tracking-wide flex items-center">
-                        <span class="w-2 h-2 bg-amber-600 rounded-full mr-3"></span>Industry Reality
-                    </h4>
-                     <ul class="space-y-3 text-gray-700 leading-relaxed ml-5 list-disc marker:text-amber-600">
-                        <li>A professional class for students who desire to grow and get work.</li>
-                        <li>Know your casting. What parts should you be going after? Don't waste time.</li>
-                        <li>What is your "invitation to the party"?</li>
-                    </ul>
-                </div>
-                
-                <div class="pt-6 border-t border-gray-100">
-                    <p class="text-3xl font-serif italic text-amber-600 font-bold">Try things. Experiment. Play.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div class="rounded-xl shadow-lg border-2 border-amber-100 overflow-hidden h-64 md:h-80">
-                 <img loading="lazy" src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto,w_600/v1768099835/IMG_7542_bmpoi0.jpg" 
-                      alt="Wide shot of acting class" 
-                      class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-            <div class="rounded-xl shadow-lg border-2 border-amber-100 overflow-hidden h-64 md:h-80">
-                 <img loading="lazy" src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto,w_600/v1768099835/IMG_3010_brwlxe.jpg" 
-                      alt="Michael Petted teaching" 
-                      class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-            <div class="rounded-xl shadow-lg border-2 border-amber-100 overflow-hidden h-64 md:h-80">
-                 <img loading="lazy" src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto,w_600/v1768099835/IMG_3003_mdelcn.jpg" 
-                      alt="Student moment in class" 
-                      class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            </div>
-        </div>
-
-        <div class="p-10 border border-gray-200 rounded-2xl shadow-lg bg-amber-50 max-w-4xl mx-auto text-center">
-            <h3 class="text-3xl font-bold text-gray-900 mb-6 uppercase">Student Success</h3>
-            <p class="text-gray-700 mb-4 text-lg leading-relaxed">Students have gone on to work on acclaimed series and films including <strong>Yellowstone</strong>. Other credits include <strong>The Promised Land</strong> (current series lead), <strong>And Just Like That</strong>, <strong>A Big Bold Beautiful Journey</strong>, <strong>American Horror Story</strong>, and <strong>Far and Away</strong> (Australia), <strong>Little Voice</strong>, <strong>We Are Who We Are</strong>, <strong>How I Met Your Father</strong>, <strong>Forever</strong> (Lifetime Movie), <strong>911</strong>, <strong>The Offer</strong>, among many others.</p>
-        </div>
-
-        <div class="text-center mt-20">
-            <a href="schedule.html" class="inline-block text-white bg-amber-600 text-xl px-12 py-5 font-bold rounded-full hover:bg-amber-700 shadow-2xl transition duration-300 uppercase tracking-widest">
-                View Class Schedule & Register
+        
+        <div class="text-center mt-12 md:mt-16 px-4">
+            <a href="about.html" class="inline-block text-white bg-amber-600 text-xs md:text-sm px-6 py-3 md:px-10 md:py-4 font-semibold rounded-lg hover:bg-amber-700 transition duration-300 shadow-lg uppercase tracking-widest">
+                Learn more about Michael
             </a>
         </div>
-    </section>    <div class="max-w-7xl mx-auto border-t border-gray-100"></div>
+    </section>
+    <div class="w-full max-w-7xl mx-auto border-t border-gray-100 px-4"></div>
 
-    <section id="the-artist" class="py-24 md:py-32 max-w-6xl mx-auto px-6">
+    <section id="the-artist" class="hidden w-full py-24 md:py-32 max-w-6xl mx-auto px-6">
         <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900">
                 THE ARTIST BEHIND THE TEACHER
@@ -260,20 +291,163 @@
     </section>
     <div class="max-w-7xl mx-auto border-t border-gray-100"></div>
 
-    <section id="the-vision" class="py-24 md:py-32 max-w-4xl mx-auto text-center px-6">
-        <h2 class="text-4xl md:text-5xl font-serif mb-8 font-bold text-gray-900">
-            THE VISION
-        </h2>
-        <p class="mt-8 text-lg text-gray-500">
-            Michael's work is rooted in the belief that truth, imagination, and courage are the core of every great performance. His mission is to help actors discover the artist within themselves by living truthfully in the work - turning craft into art, one scene at a time.
-        </p>
-        <a href="schedule.html" class="mt-12 inline-block text-white bg-amber-600 text-xl px-10 py-4 font-bold rounded-full hover:bg-amber-700 shadow-xl transition duration-300">
-            Begin Your Work Today
-        </a>
+    <section class="pt-16 md:pt-24 w-full overflow-hidden">
+        <div class="relative w-full overflow-hidden shadow-2xl mb-12">
+            <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_50,w_1920/v1769292402/IMG_9225_bdjgap.jpg" 
+                 alt="Hudson Theatre Banner" 
+                 class="w-full h-64 md:h-80 lg:h-96 object-cover">
+            <div class="absolute inset-0 bg-gray-900/40"></div>
+            <div class="absolute inset-0 flex items-center justify-center px-4">
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-amber-400 uppercase tracking-wide text-center">THE HUDSON THEATRE</h2>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 md:px-6 pb-16 md:pb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="p-8 bg-amber-50 border-l-4 border-amber-600 rounded-lg shadow-lg">
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                        Michael's studio is located in the heart of Hollywood's Theatre Row at <strong class="text-amber-700">The Hudson Theatre</strong>, which has been a landmark of the Los Angeles stage community for decades. It provides our actors with a professional, inspiring environment to hone their craft.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed italic">
+                        The Hudson's rich history and commitment to artistic excellence make it the perfect home for the Michael Petted Acting Studio.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="rounded-xl overflow-hidden shadow-lg h-48 md:h-64">
+                        <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769292394/IMG_9222_dp4gxl.jpg" 
+                             alt="Hudson Theatre Interior" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg h-48 md:h-64">
+                        <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769292482/IMG_5914_ltp4x1.jpg" 
+                             alt="Hudson Theatre Exterior" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="col-span-2 rounded-xl overflow-hidden shadow-lg h-48 md:h-64">
+                        <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_600/v1769292630/IMG_5537_c4yntx.jpg" 
+                             alt="Hudson Theatre Stage" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full max-w-7xl mx-auto border-t border-gray-100 px-4"></div>
+
+    <section id="featured-testimonial" class="w-full py-16 md:py-24 lg:py-32 bg-gray-50 max-w-7xl mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start md:items-center">
+            <!-- Desktop Image -->
+            <div class="hidden md:flex lg:col-span-5 items-center">
+                <div class="relative max-w-xs mx-auto w-full">
+                    <div class="absolute -inset-4 bg-amber-100/50 rounded-2xl -rotate-2"></div>
+                    <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_500/v1769815873/L30066ok2_ebno8v.jpg" 
+                         alt="Michael Petted working with an actor in class" 
+                         class="relative rounded-xl shadow-2xl w-full h-auto object-cover z-10">
+                </div>
+            </div>
+            
+            <div class="lg:col-span-7 flex flex-col">
+                <div class="inline-block px-4 py-1 bg-amber-100 text-amber-700 rounded-full text-sm font-bold uppercase tracking-widest mb-4 md:self-start mx-auto md:mx-0">
+                    Student Spotlight
+                </div>
+                
+                <!-- Name and title - appears second on mobile, third on desktop -->
+                <div class="order-2 md:order-3 pt-0 md:pt-6 mb-6 md:mb-0 md:border-t md:border-gray-100">
+                    <p class="font-bold text-gray-900 text-xl"><span class="hidden md:inline">— </span>Lance Miller</p>
+                    <p class="text-black font-medium">Actor & Filmmaker</p>
+                </div>
+                
+                <!-- Testimonial text - appears fourth on mobile, second on desktop -->
+                <div class="order-4 md:order-2 space-y-4 text-base text-gray-600 leading-relaxed mb-6">
+                    <p>
+                        I've had the privilege of knowing Michael Petted not only as an exceptional acting teacher, but as a mentor and dear friend. His guidance has shaped me profoundly, both as an artist and as a person.
+                    </p>
+                    <p>
+                        Michael brings a distinctly directorial approach to his teaching. In his scene study class, actors rehearse and perform fully realized scenes with props, wardrobe, and blocking—creating an experience that feels much like working on a weekly play. This immersive, professional environment allows actors to engage with the work as it exists in real-world practice.
+                    </p>
+                    <p>
+                        Like a director in rehearsal, Michael breaks down scenes with precision and insight, helping actors uncover specific beats and moments they can truly make their own. He explores multiple choices, challenges actors to go deeper, and then gives them the opportunity to immediately apply those discoveries through performance. This process trains actors to mine the script thoroughly and find the gold in every line.
+                    </p>
+                    <p>
+                        Over the seven years I've worked with Michael, I've come into my own not only as an actor, but as a man. Through his mentorship, I've developed greater emotional intelligence, clearer and more honest self-expression, and the confidence to fully be myself—both in my work and in the world.
+                    </p>
+                    <p>
+                        Michael's class is a supportive, mixed-level environment where beginners, advanced actors, and working professionals can all thrive. He has a rare ability to bring actors out of their shell while maintaining a safe space that encourages risk, growth, and authenticity. Actors seeking not only strong training, but also a collaborative community that regularly creates original projects—short films, feature films, and online media—will find his class especially rewarding.
+                    </p>
+                </div>
+
+                <!-- Image on Mobile - appears third on mobile -->
+                <div class="order-3 md:hidden flex justify-center my-8">
+                    <div class="relative max-w-xs w-full">
+                        <div class="absolute -inset-4 bg-amber-100/50 rounded-2xl -rotate-2"></div>
+                        <div class="relative rounded-xl shadow-2xl overflow-hidden z-10 h-64">
+                            <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_auto,q_75,w_500/v1769815873/L30066ok2_ebno8v.jpg" 
+                                 alt="Michael Petted working with an actor in class" 
+                                 class="w-full h-full object-cover object-top">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Read more link -->
+                <div class="order-5 md:order-4 pt-4 md:mt-auto">
+                    <a href="testimonials.html" class="inline-flex items-center text-amber-600 font-bold text-lg hover:text-amber-700 transition-colors group">
+                        Read More Testimonials
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full max-w-7xl mx-auto border-t border-gray-100 px-4"></div>
+
+    <section class="py-12 md:py-16 lg:py-20 bg-gray-50 border-t border-gray-200 w-full overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6 uppercase tracking-tight">
+                Train with Michael
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 mb-8 md:mb-10 leading-relaxed">
+                Whether you are a seasoned professional or just beginning your journey, join a community dedicated to the ongoing growth of the working actor — where the craft of acting meets the reality of the industry.
+            </p>
+            <div class="flex justify-center">
+                <a href="schedule.html" class="inline-block text-white bg-amber-600 px-6 py-3 md:px-10 md:py-4 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-lg uppercase tracking-widest text-xs md:text-sm">
+                    Enroll Now
+                </a>
+            </div>
+        </div>
     </section>
 
     <footer class="py-8 bg-gray-100 text-center text-gray-500 text-sm border-t border-gray-200">
-        <p>Michael Petted Acting Studio. Los Angeles, CA. | &copy; 2025</p>
+        <p class="mb-2">Michael Petted Acting Studio. Los Angeles, CA. | &copy; 2026 All Rights Reserved.</p>
+        <p class="text-xs">
+            <a href="terms.html" class="text-amber-600 hover:text-amber-700">Terms of Use</a> | 
+            <a href="privacy.html" class="text-amber-600 hover:text-amber-700">Privacy Policy</a>
+        </p>
     </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
 </body>
 </html>
