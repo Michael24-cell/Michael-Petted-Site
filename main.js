@@ -1,63 +1,53 @@
-// Host Information Management
-const hostInfo = {
-    name: "Michael Petted",
-    studioName: "Michael Petted Acting Studio",
-    location: "The Hudson Theatre in Los Angeles",
-    city: "Los Angeles, CA"
-};
+// Michael Petted Acting Studio — shared behavior (menu, footer year, mobile CTA)
+(function () {
+    // --- Mobile menu toggle ---
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
 
-// Function to update host name throughout the page
-function updateHostName(newName) {
-    hostInfo.name = newName;
-    hostInfo.studioName = `${newName} Acting Studio`;
-    
-    // Update all instances dynamically
-    updatePageContent();
-}
-
-// Function to update location
-function updateLocation(newLocation) {
-    hostInfo.location = newLocation;
-    updatePageContent();
-}
-
-// Function to update city
-function updateCity(newCity) {
-    hostInfo.city = newCity;
-    updatePageContent();
-}
-
-// Function to update all host information at once
-function updateHostInfo(updates) {
-    Object.assign(hostInfo, updates);
-    updatePageContent();
-}
-
-// Function to update the page content with current host info
-function updatePageContent() {
-    // Update navigation studio name
-    const navTitle = document.querySelector('nav .text-2xl');
-    if (navTitle) {
-        navTitle.textContent = hostInfo.studioName.toUpperCase();
+    if (menuBtn && menu) {
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.addEventListener('click', function () {
+            const isOpen = !menu.classList.toggle('hidden');
+            menuBtn.setAttribute('aria-expanded', String(isOpen));
+        });
+        menu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                menu.classList.add('hidden');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
     }
-    
-    // Update the location in "The Teacher" section
-    const locationText = document.querySelector('#the-teacher blockquote strong');
-    if (locationText) {
-        locationText.textContent = hostInfo.location;
-    }
-    
-    // Update footer
-    const footer = document.querySelector('footer p');
-    if (footer) {
-        footer.innerHTML = `${hostInfo.studioName}. ${hostInfo.city}. | &copy; 2025`;
-    }
-    
-    // Trigger a custom event for any other listeners
-    document.dispatchEvent(new CustomEvent('hostInfoUpdated', { detail: hostInfo }));
-}
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-    updatePageContent();
-});
+    // --- Footer copyright year ---
+    document.querySelectorAll('[data-year]').forEach(function (el) {
+        el.textContent = new Date().getFullYear();
+    });
+
+    // --- Sticky mobile CTA bar ---
+    const path = window.location.pathname;
+    if (!/(privacy|terms)(\.html)?\/?$/.test(path)) {
+        const onSchedule = /schedule(\.html)?\/?$/.test(path);
+        const bar = document.createElement('div');
+        bar.className = 'mobile-cta-bar';
+        bar.innerHTML =
+            '<p class="cta-label"><strong>First visit is free</strong>Wednesdays 7–11 PM, Hudson Theatre</p>' +
+            (onSchedule
+                ? '<a class="cta-btn" href="mailto:mpettedstudio@gmail.com?subject=Free%20Visit%20Request">Schedule a Free Visit</a>'
+                : '<a class="cta-btn" href="schedule.html">Schedule a Free Visit</a>');
+        document.body.appendChild(bar);
+        document.body.classList.add('has-mobile-cta');
+
+        let ticking = false;
+        function updateBar() {
+            ticking = false;
+            bar.classList.toggle('is-visible', window.scrollY > 480);
+        }
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                ticking = true;
+                window.requestAnimationFrame(updateBar);
+            }
+        }, { passive: true });
+        updateBar();
+    }
+})();
