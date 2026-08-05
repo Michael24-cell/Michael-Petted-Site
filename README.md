@@ -29,3 +29,14 @@ python3 -m http.server 3000
 
 Then open `http://localhost:3000` (you’ll need to refresh the browser manually after edits).
 
+### Contact form (Resend)
+
+`contact.html` submits to the `/api/contact` serverless function, which sends the message via [Resend](https://resend.com). To make it work in production:
+
+1. Sign up at resend.com **using `mpettedstudio@gmail.com`** as the account email (this lets you send to that address without verifying a custom domain).
+2. Copy your API key from the Resend dashboard.
+3. In the Vercel project settings → Environment Variables, add `RESEND_API_KEY` with that value (Production + Preview).
+4. Redeploy. No code changes needed — the function reads the key from `process.env.RESEND_API_KEY`.
+
+Static dev servers (`live-server`, `python -m http.server`, or plain `serve`) don't run `/api` functions — form submissions will show a friendly error locally. To test the full send, use `vercel dev` or just deploy to a Vercel preview.
+

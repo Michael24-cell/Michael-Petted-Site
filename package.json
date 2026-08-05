@@ -4,6 +4,8 @@
   "scripts": {
     "dev": "npx --yes live-server --host=localhost --port=3000 --open=/index.html",
     "dev:alt": "npx --yes live-server --host=localhost --port=3001 --open=/index.html"
+  },
+  "dependencies": {
+    "resend": "^6.18.1"
   }
 }
-

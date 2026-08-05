@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Michael Petted - Schedule a Free Visit</title>
+    <meta name="description" content="Send Michael Petted a message to schedule a free class visit, ask about enrollment, or inquire about private coaching. Michael follows up personally.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.michaelpettedactingstudio.com/contact.html">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111827'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='26' font-weight='bold' text-anchor='middle' fill='%23f59e0b'%3EMP%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden w-full max-w-[100vw]">
+
+    <header class="sticky top-0 left-0 right-0 z-50 bg-white shadow-md w-full overflow-x-hidden">
+        <div class="h-16 md:h-auto md:p-6 flex items-center">
+        <nav class="grid grid-cols-[auto_1fr_auto] md:flex md:justify-between items-center max-w-7xl mx-auto w-full px-2 gap-2">
+            <button id="mobile-menu-btn" aria-label="Open menu" aria-controls="mobile-menu" class="md:hidden flex flex-col space-y-1.5 p-2 focus:outline-none z-50 flex-shrink-0 h-11 w-11 items-center justify-center">
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+                <span class="block w-6 h-0.5 bg-gray-900 transition duration-300"></span>
+            </button>
+
+            <a href="index.html" class="text-sm md:text-sm lg:text-2xl font-serif tracking-tight md:tracking-wide text-gray-900 min-w-0 overflow-hidden text-ellipsis text-center md:text-left whitespace-nowrap justify-self-center md:flex-shrink-0">MICHAEL PETTED ACTING STUDIO</a>
+
+            <div class="space-x-3 lg:space-x-8 hidden md:flex font-medium text-gray-600 text-sm lg:text-base whitespace-nowrap">
+                <a href="index.html" class="hover:text-amber-600">Home</a>
+                <a href="schedule.html" class="hover:text-amber-600">Schedule & Enroll</a>
+                <a href="testimonials.html" class="hover:text-amber-600">Testimonials</a>
+                <a href="about.html" class="hover:text-amber-600">About Michael</a>
+            </div>
+
+            <a href="schedule.html" class="text-white bg-amber-600 px-2 py-2 md:px-5 md:py-2 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-sm text-xs md:text-base whitespace-nowrap flex-shrink-0 h-11 flex items-center justify-center justify-self-end">
+                Enroll
+            </a>
+        </nav>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden mx-2 mb-4 bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+            <div class="flex flex-col space-y-0">
+                <a href="index.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Home</a>
+                <a href="schedule.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Schedule & Enroll</a>
+                <a href="testimonials.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition border-b">Testimonials</a>
+                <a href="about.html" class="px-6 py-3 text-gray-600 hover:bg-amber-50 hover:text-amber-600 transition">About Michael</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="w-full py-12 md:py-16 lg:py-20 max-w-2xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-10">
+            <p class="kicker text-amber-600 mb-3">Get in Touch</p>
+            <h1 id="form-heading" class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Send Michael a Message</h1>
+            <p id="form-subtext" class="text-base md:text-lg text-gray-600 leading-relaxed">Tell him a little about yourself, and he'll follow up personally. No online checkout, no obligation — just a conversation.</p>
+        </div>
+
+        <form id="contact-form" class="space-y-5 p-0 md:p-8 border-0 md:border border-gray-200 rounded-none md:rounded-xl shadow-none md:shadow-lg bg-transparent md:bg-white" novalidate>
+            <!-- Honeypot — hidden from real visitors, catches basic bots -->
+            <div class="hidden" aria-hidden="true">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div>
+                <label for="reason" class="block text-sm font-semibold text-gray-800 mb-1.5">What's this about?</label>
+                <select id="reason" name="reason" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+                    <option value="free-visit">Scheduling a free class visit</option>
+                    <option value="enrollment">Enrollment</option>
+                    <option value="coaching">Private audition coaching</option>
+                    <option value="general">General inquiry</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="name" class="block text-sm font-semibold text-gray-800 mb-1.5">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-semibold text-gray-800 mb-1.5">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+            </div>
+
+            <div>
+                <label for="phone" class="block text-sm font-semibold text-gray-800 mb-1.5">Phone <span class="text-gray-400 font-normal">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+            </div>
+
+            <div>
+                <label for="message" class="block text-sm font-semibold text-gray-800 mb-1.5">Message</label>
+                <textarea id="message" name="message" required rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-800 resize-y focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500" placeholder="A little about your acting background and what you're looking for..."></textarea>
+            </div>
+
+            <p id="form-error" class="hidden text-sm text-red-600" role="alert"></p>
+
+            <button type="submit" id="submit-btn" class="w-full text-white bg-amber-600 px-6 py-3.5 rounded-lg hover:bg-amber-700 transition duration-300 font-semibold shadow-lg disabled:opacity-60 disabled:cursor-not-allowed">
+                Send Message
+            </button>
+
+            <p class="text-xs text-gray-500 text-center leading-relaxed">Prefer email? Reach Michael directly at <a href="mailto:mpettedstudio@gmail.com" class="text-amber-600 hover:text-amber-700 font-medium">mpettedstudio@gmail.com</a></p>
+        </form>
+
+        <div id="form-success" class="hidden text-center p-6 md:p-10 border-0 md:border border-amber-200 rounded-none md:rounded-xl shadow-none md:shadow-lg bg-amber-50">
+            <p class="text-2xl mb-3">&#10003;</p>
+            <h2 class="text-xl md:text-2xl font-serif font-bold text-gray-900 mb-3">Message Sent</h2>
+            <p class="text-gray-700 leading-relaxed">Thank you — Michael will follow up with you personally. In the meantime, feel free to look around the studio.</p>
+            <a href="index.html" class="inline-block mt-6 text-amber-700 font-semibold hover:text-amber-800">&larr; Back to Home</a>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-gray-900 text-center text-gray-400 text-sm">
+        <p class="font-serif text-white tracking-wide mb-2">MICHAEL PETTED ACTING STUDIO</p>
+        <p class="mb-1">The Hudson Theatre &middot; 6539 Santa Monica Blvd, Los Angeles, CA 90038</p>
+        <p class="mb-3">Wednesdays 7:00&ndash;11:00 PM &middot; <a href="mailto:mpettedstudio@gmail.com" class="text-amber-500 hover:text-amber-400">mpettedstudio@gmail.com</a></p>
+        <p class="mb-4 text-xs">
+            <a href="https://www.instagram.com/michaelpetted?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Michael Petted on Instagram (opens in a new tab)" class="text-amber-500 hover:text-amber-400">Instagram</a>
+            <span class="mx-2 text-gray-600">&middot;</span>
+            <a href="https://www.imdb.com/name/nm0678495/" target="_blank" rel="noopener noreferrer" aria-label="Michael Petted on IMDb (opens in a new tab)" class="text-amber-500 hover:text-amber-400">IMDb</a>
+        </p>
+        <p class="text-xs text-gray-500">
+            &copy; <span data-year>2026</span> All Rights Reserved &middot;
+            <a href="terms.html" class="text-amber-500 hover:text-amber-400">Terms of Use</a> &middot;
+            <a href="privacy.html" class="text-amber-500 hover:text-amber-400">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        (function () {
+            const REASON_COPY = {
+                'free-visit': {
+                    heading: 'Schedule a Free Visit',
+                    subtext: "Your first class is free. Tell Michael a bit about yourself and he'll follow up personally to set it up."
+                },
+                enrollment: {
+                    heading: 'Ask About Enrollment',
+                    subtext: 'Enrollment is $250/month for 4 classes and begins with an interview. Send a message and Michael will follow up personally.'
+                },
+                coaching: {
+                    heading: 'Private Audition Coaching',
+                    subtext: 'Tell Michael about your upcoming audition or project, and he’ll follow up to discuss scheduling and rates.'
+                },
+                general: {
+                    heading: 'Send Michael a Message',
+                    subtext: "Tell him a little about yourself, and he'll follow up personally. No online checkout, no obligation — just a conversation."
+                }
+            };
+
+            const params = new URLSearchParams(window.location.search);
+            const reason = params.get('reason');
+            const reasonSelect = document.getElementById('reason');
+            const messageField = document.getElementById('message');
+
+            if (reason && REASON_COPY[reason]) {
+                reasonSelect.value = reason;
+                document.getElementById('form-heading').textContent = REASON_COPY[reason].heading;
+                document.getElementById('form-subtext').textContent = REASON_COPY[reason].subtext;
+                document.title = REASON_COPY[reason].heading + ' - Michael Petted Acting Studio';
+            }
+
+            reasonSelect.addEventListener('change', function () {
+                const copy = REASON_COPY[reasonSelect.value] || REASON_COPY.general;
+                document.getElementById('form-heading').textContent = copy.heading;
+                document.getElementById('form-subtext').textContent = copy.subtext;
+            });
+
+            const form = document.getElementById('contact-form');
+            const errorEl = document.getElementById('form-error');
+            const submitBtn = document.getElementById('submit-btn');
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                errorEl.classList.add('hidden');
+
+                const data = {
+                    name: document.getElementById('name').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    reason: reasonSelect.value,
+                    message: messageField.value.trim(),
+                    company: document.getElementById('company').value
+                };
+
+                if (!data.name || !data.email || !data.message) {
+                    errorEl.textContent = 'Please fill in your name, email, and message.';
+                    errorEl.classList.remove('hidden');
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+
+                try {
+                    const res = await fetch('/api/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                    const result = await res.json().catch(function () { return {}; });
+
+                    if (!res.ok) {
+                        throw new Error(result.error || 'Something went wrong. Please try again.');
+                    }
+
+                    form.classList.add('hidden');
+                    document.getElementById('form-success').classList.remove('hidden');
+                } catch (err) {
+                    errorEl.textContent = err.message || 'Something went wrong. Please try again or email mpettedstudio@gmail.com directly.';
+                    errorEl.classList.remove('hidden');
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
