@@ -4,7 +4,8 @@ const TO_EMAIL = 'mpettedstudio@gmail.com';
 const FROM_EMAIL = 'Michael Petted Acting Studio <onboarding@resend.dev>';
 
 const REASON_LABELS = {
-  'free-visit': 'Free Class Visit',
+  'free-visit': 'Class Audit',
+  'zoom-class': 'International Online Scene Study Class',
   enrollment: 'Enrollment',
   coaching: 'Private Coaching',
   general: 'General Inquiry',

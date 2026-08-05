@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Michael Petted - Schedule a Free Audit</title>
-    <meta name="description" content="Send Michael Petted a message to schedule a free class visit, ask about enrollment, or inquire about private coaching. Michael follows up personally.">
+    <title>Contact Michael Petted - Schedule an Audit</title>
+    <meta name="description" content="Send Michael Petted a message to schedule a class audit, ask about enrollment, or inquire about private coaching. Michael follows up personally.">
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://www.michaelpettedactingstudio.com/contact.html">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111827'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='26' font-weight='bold' text-anchor='middle' fill='%23f59e0b'%3EMP%3C/text%3E%3C/svg%3E">
@@ -69,7 +69,8 @@
             <div>
                 <label for="reason" class="block text-sm font-semibold text-gray-800 mb-1.5">What's this about?</label>
                 <select id="reason" name="reason" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
-                    <option value="free-visit">Scheduling a free class visit</option>
+                    <option value="free-visit">Scheduling a class audit</option>
+                    <option value="zoom-class">International Online Scene Study Class</option>
                     <option value="enrollment">Enrollment</option>
                     <option value="coaching">Private audition coaching</option>
                     <option value="general">General inquiry</option>
@@ -108,7 +109,7 @@
         <div id="form-success" class="hidden text-center p-6 md:p-10 border-0 md:border border-amber-200 rounded-none md:rounded-xl shadow-none md:shadow-lg bg-amber-50">
             <p class="text-2xl mb-3">&#10003;</p>
             <h2 class="text-xl md:text-2xl font-serif font-bold text-gray-900 mb-3">Message Sent</h2>
-            <p class="text-gray-700 leading-relaxed">Thank you — Michael will follow up with you personally. In the meantime, feel free to look around the studio.</p>
+            <p class="text-gray-700 leading-relaxed">Thank you — Michael will follow up with you personally. In the meantime, take a look around the studio.</p>
             <a href="index.html" class="inline-block mt-6 text-amber-700 font-semibold hover:text-amber-800">&larr; Back to Home</a>
         </div>
     </section>
@@ -134,8 +135,12 @@
         (function () {
             const REASON_COPY = {
                 'free-visit': {
-                    heading: 'Schedule a Free Audit',
-                    subtext: "Your first class is free. Tell Michael a bit about yourself and he'll follow up personally to set it up."
+                    heading: 'Schedule an Audit',
+                    subtext: "Tell Michael a bit about yourself and he'll follow up personally to set it up."
+                },
+                'zoom-class': {
+                    heading: 'Reserve Your Spot',
+                    subtext: 'Tell Michael a bit about yourself and he’ll follow up personally about the International Online Scene Study Class. Class size is limited.'
                 },
                 enrollment: {
                     heading: 'Ask About Enrollment',

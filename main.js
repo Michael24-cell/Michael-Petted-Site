@@ -30,7 +30,7 @@
         const bar = document.createElement('div');
         bar.className = 'mobile-cta-bar';
         bar.innerHTML =
-            '<p class="cta-label"><strong>First visit is free</strong>Wednesdays 7–11 PM, Hudson Theatre</p>' +
+            '<p class="cta-label"><strong>Wednesdays 7–11 PM</strong>The Hudson Theatre, LA</p>' +
             (onSchedule
                 ? '<a class="cta-btn" href="contact.html?reason=free-visit">Schedule a Free Audit</a>'
                 : '<a class="cta-btn" href="schedule.html">Schedule a Free Audit</a>');
