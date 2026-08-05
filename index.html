@@ -147,7 +147,8 @@
                     Explore the Class
                 </a>
             </div>
-            <div class="mt-10 md:mt-12 flex justify-center px-2">
+            <!-- Mobile: stays in the centered flow -->
+            <div class="mt-10 flex justify-center px-2 md:hidden">
                 <a href="testimonials.html" class="hero-quote-chip">
                     <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto,w_100/v1767133549/Screenshot_2025-12-30_at_2.25.42_PM_gkeeyy.jpg" alt="Beth Grant" class="w-12 h-12 rounded-full object-cover border-2 border-amber-500 flex-shrink-0" style="height: 3rem;">
                     <span class="block">
@@ -157,6 +158,15 @@
                 </a>
             </div>
         </div>
+
+        <!-- Desktop: pinned to the bottom-left of the hero -->
+        <a href="testimonials.html" class="hero-quote-chip hidden md:flex absolute bottom-10 lg:bottom-12 left-6 lg:left-10 z-20">
+            <img src="https://res.cloudinary.com/dlzyji6ev/image/upload/f_jpg,q_auto,w_100/v1767133549/Screenshot_2025-12-30_at_2.25.42_PM_gkeeyy.jpg" alt="Beth Grant" class="w-12 h-12 rounded-full object-cover border-2 border-amber-500 flex-shrink-0" style="height: 3rem;">
+            <span class="block">
+                <span class="block text-sm text-gray-100 italic font-serif leading-snug">"Michael is seriously one of the best actors I've ever worked with in my life..."</span>
+                <span class="block kicker text-amber-400 mt-1.5">Beth Grant &middot; Actress</span>
+            </span>
+        </a>
     </section>
 
     <!-- Actors placed in -->
