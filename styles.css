@@ -148,7 +148,7 @@ button:focus-visible {
 }
 
 .marquee-track {
-    animation: marquee-scroll 34s linear infinite;
+    animation: marquee-scroll 20s linear infinite;
 }
 
 .marquee-track:hover {
