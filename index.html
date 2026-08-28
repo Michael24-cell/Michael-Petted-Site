@@ -565,6 +565,8 @@
     <script>
         // International Online Scene Study — entry popup
         (function () {
+            const POPUP_ENABLED = false; // Temporarily hidden — flip to true to re-enable
+            if (!POPUP_ENABLED) return;
             const DISMISS_KEY = 'zoomClassModalDismissed';
             const overlay = document.getElementById('zoom-modal-overlay');
             const panel = document.getElementById('zoom-modal-panel');
